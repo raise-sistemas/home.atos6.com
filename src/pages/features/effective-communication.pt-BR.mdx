@@ -1,0 +1,42 @@
+---
+title: Sistema para Igrejas | Gestão de Células | Gestão de membros
+path: /features/effective-communication
+description: O mais completo sistema para igrejas integrado ao aplicativo para igrejas mais inovador! Atos6 te ajuda a pastorear com qualidade, sua gestão e comunicação mais eficientes. Clique e confira
+keywords: igrejas, células, membros
+hero: {
+  title: "Comunicação",
+  description: "Sabemos que uma igreja em crescimento tem uma ótima comunicação entre líderes e membros. Envie e-mails e mensagens para membros ou grupos de pessoas como jovens, aniversariantes, moradores de um bairro, etc."
+}
+previous: {
+  path: /features/online-donations,
+  title: "Doações online"
+}
+next: {
+  path: /features/teaching,
+  title: "Ensino"
+}
+---
+
+import Block from "../../components/block"
+import PrimeBanner from "../../components/prime_banner"
+import ScheduleDemonstrationBanner from "../../components/schedule_demonstration_banner"
+
+import sendMessageToApp from "../../images/send-message-to-app.png"
+import email from "../../images/email.png"
+
+<ScheduleDemonstrationBanner />
+
+<Block
+  imageOnLeft
+  image={email}
+  title="Envio de e-mails"
+  description="Envie de e-mails aos membros (SEM LIMITES)."
+/>
+
+<Block
+  image={sendMessageToApp}
+  title="Envio de mensagem pelo Aplicativo"
+  description="Envie mensagens para todos que possuem o aplicativo da sua igreja"
+/>
+
+<PrimeBanner />

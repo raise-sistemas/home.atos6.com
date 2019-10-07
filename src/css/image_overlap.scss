@@ -1,0 +1,36 @@
+.image-overlap {
+  position: relative;
+  display: block;
+
+  @media(max-width: 768px) {
+    width: 90%;
+  }
+}
+
+.under {
+  position: absolute;
+  left: 149px;
+  top: 0;
+  z-index: 1;
+  margin-bottom: 0 !important;
+
+  @media(max-width: 768px) {
+    left: 119px;
+    width: 200px;
+    height: 291px;
+  }
+}
+
+.over {
+  position: absolute;
+  left: 0px;
+  top: 46px;
+  z-index: 2;
+  margin-bottom: 0 !important;
+
+  @media(max-width: 768px) {
+    left: 30px;
+    width: 180px;
+    height: 291px;
+  }
+}

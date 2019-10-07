@@ -1,0 +1,47 @@
+.schedule-demonstration-banner {
+  margin-top: 120px;
+  margin-bottom: 195px;
+  text-align: left;
+  display: block;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .call-to-action {
+    flex-basis: 45%;
+    flex-grow: 1;
+    text-align: left;
+    font: 400 20px/27px Raleway;
+    color: $dark-green;
+  }
+
+  @media(max-width: 768px) {
+    margin-bottom: 92px;
+
+    .call-to-action {
+      display: block;
+      text-align: center;
+      width: 100%;
+      margin: 0 auto;
+      margin-bottom: 30px
+    }
+
+    .btn-schedule {
+      display: block;
+      margin: 0 auto;
+      width: 245px;
+      height: 46px;
+    }
+  }
+
+  .btn-schedule {
+    padding: 11px;
+    display: inline-block;
+    line-height: 26px;
+  }
+}

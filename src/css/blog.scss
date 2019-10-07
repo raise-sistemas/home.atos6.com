@@ -1,0 +1,89 @@
+.blog {
+  background-color: $light-gray;
+
+  .section-title {
+    color: $dark-green;
+    font: Bold 36px/42px Raleway;
+    align-self: center;
+    justify-content: center;
+    padding-bottom: 0;
+    padding-top: 43px;
+    margin-bottom: 38px;
+  }
+
+  .action {
+    margin: 0 auto;
+    margin-top: 60px;
+    padding-bottom: 36px;
+    text-transform: uppercase;
+    align-self: center;
+    justify-content: center;
+
+    .btn-default {
+      font: Bold 16px/22px Raleway !important;
+    }
+  }
+
+  .container {
+    display: flex;
+
+    @media(max-width: 768px) {
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .post {
+      align-self: flex-start;
+      flex-direction: column;
+      flex-basis: 32%;
+      flex-grow: 1;
+      width: 284px;
+      margin-right: 133px;
+
+      @media(max-width: 768px) {
+        align-self: center;
+        flex-basis: 70%;
+        margin-right: 0;
+        margin-bottom: 30px;
+        margin-left: 5px;
+        width: 100%;
+
+        img {
+          width: 98%;
+        }
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      .title a {
+        font: 600 20px/27px Segoe UI;
+        color: $leaf-green;
+      }
+
+      .image {
+        align-self: flex-start;
+
+        img {
+          margin-bottom: 0;
+        }
+      }
+
+      .additional-info {
+        color: $middle-gray;
+        margin-bottom: 7px;
+        text-transform: uppercase;
+
+        .category {
+          font: Bold 11px/15px Segoe UI;
+        }
+
+        .published-at {
+          font: 400 11px/15px Segoe UI;
+        }
+      }
+    }
+  }
+}

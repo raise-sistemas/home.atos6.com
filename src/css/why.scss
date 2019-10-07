@@ -1,0 +1,115 @@
+.why {
+  background-color: $light-gray;
+  height: 1377px;
+  padding-top: 66px;
+  height: 100%;
+
+  @media screen and (min-width: 768px) and (max-width: 768px) {
+    .container {
+      padding: 0;
+    }
+  }
+
+  .why-title {
+    text-align: center;
+    color: $dark-green;
+    font: Bold 36px/42px Raleway;
+    margin-bottom: 15px;
+
+    @media(max-width: 768px) {
+      font: Bold 24px/32px Raleway;
+    }
+  }
+
+  .why-briefing {
+    margin: 0 auto;
+    text-align: center;
+    font: 400 14px/25px Raleway;
+    color: $dark-green;
+    width: 582px;
+
+    @media(max-width: 768px) {
+      font: 400 12px/20px Raleway;
+      width: 300px;
+    }
+  }
+
+  .why-features {
+    margin-top: 26px;
+    padding-top: 16px;
+    background-color: $white;
+
+    .primary-features {
+      margin-top: 95px;
+      margin-bottom: 179px;
+    }
+
+    @media(max-width: 768px) {
+      margin-bottom: 20px;
+    }
+
+    .slick-center {
+      transform: scale(1.08);
+      margin-top: 0;
+    }
+
+    .slick-dots {
+      position: relative;
+      bottom: 0;
+      padding-bottom: 20px;
+      padding-top: 20px;
+
+      li {
+        color: $extra-light-gray;
+
+        button:before {
+          content: '';
+          border-bottom: 4px solid #A5ADAF;
+          height: 4px;
+          font-size: 12px;
+          opacity: 1;
+        }
+
+        &.slick-active button:before {
+          border-color: $leaf-green;
+        }
+      }
+    }
+  }
+
+  .why-feature-item {
+    background-color: $white;
+    box-shadow: 0px 3px 6px #00000029;
+    text-align: center;
+    padding: 25px;
+    min-height: 455px;
+    margin-top: 15px;
+    margin-bottom: 40px;
+
+    img {
+      width: 156px;
+      height: 119px;
+      margin: 0 auto;
+    }
+
+    .why-feature-item-detail {
+      .why-feature-item-detail-name {
+        color: $leaf-green;
+        font: Bold 18px/24px Raleway;
+        display: block;
+        margin-bottom: 20px;
+        margin-top: 20px;
+      }
+
+      .why-feature-item-detail-description {
+        font: 400 12px/20px Raleway;
+        display: block;
+      }
+
+      .know-more {
+        margin-top: 40px;
+        border: 0;
+      }
+    }
+  }
+}

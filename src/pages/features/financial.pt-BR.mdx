@@ -1,0 +1,54 @@
+---
+title: Sistema para Igrejas | Gestão de Células | Gestão de membros
+path: /features/financial
+description: O mais completo sistema para igrejas integrado ao aplicativo para igrejas mais inovador! Atos6 te ajuda a pastorear com qualidade, sua gestão e comunicação mais eficientes. Clique e confira
+keywords: igrejas, células, membros
+hero: {
+  title: "Gestão financeira",
+  description: "Saiba como está a saúde financeira da sua igreja. Acompanhe todas as contribuições e despesas, cadastre as contas bancárias e veja o saldo, extrato e o fluxo de caixa diretamente no Atos6."
+}
+previous: {
+  path: /features/cells,
+  title: "Gestão de células"
+}
+next: {
+  path: /features/online-donations,
+  title: "Doação online"
+}
+---
+
+import Block from "../../components/block"
+import ScheduleDemonstrationBanner from "../../components/schedule_demonstration_banner"
+
+import financialReports from "../../images/financial-reports.png"
+import financialContributionsAndExpenses from "../../images/financial-contributions-and-expenses.png"
+import financialBankAccountsCostCenters from "../../images/financial-bank-accounts-cost-centers.png"
+import financialAccountPlan from "../../images/financial-account-plan.png"
+
+<ScheduleDemonstrationBanner />
+
+<Block
+  imageOnLeft
+  image={financialAccountPlan}
+  title="Plano de contas"
+  description="Crie um plano de contas de acordo com as necessidades da sua igreja, cadastre e edite categorias e subcategorias de despesas e receitas."
+/>
+
+<Block
+  image={financialBankAccountsCostCenters}
+  title="Contas bancárias, fornecedores e centro de custos"
+  description="Cadastre seus fornecedores, centro de custos e as suas contas bancárias para visualizar informações de extrato e manter o seu financeiro organizado."
+/>
+
+<Block
+  imageOnLeft
+  image={financialContributionsAndExpenses}
+  title="Cadastro de contribuições e despesas"
+  description="Registre de forma ágil e segura suas contribuições e despesas, utilizando as categorias cadastradas no plano de contas como: dízimo, ofertas, contas fixas e etc."
+/>
+
+<Block
+  image={financialReports}
+  title="Relatórios e gráficos financeiros"
+  description="Diversos relatórios gerenciais para monitorar o financeiro da sua igreja: Fluxo de caixa, resumo financeiro, demonstração de resultados, eventos por categorias, contribuições por pessoas, contribuições com filtros por data, categorias e cultos, despesas por contas bancárias, centros de custo, formas de pagamento e por fornecedores."
+/>

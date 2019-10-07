@@ -1,0 +1,133 @@
+.all-in-one-place {
+  height: 558px;
+  display: flex;
+
+  & .images {
+    &:after {
+      content: '';
+      z-index: 2;
+      position: absolute;
+      top: 1211px;
+      left: 629px;
+      height: 157px;
+      width: 280px;
+      background: url('../images/transmissao-ao-vivo.png') 0 0 no-repeat;
+      background-size: cover;
+
+      @media(max-width: 768px) {
+        top: 1335px;
+        left: 14px;
+        width: 140px;
+        height: 79px;
+      }
+
+      @media(min-width: 1441px) {
+        left: 879px;
+      }
+    }
+
+    &:before {
+      content: '';
+      z-index: 2;
+      position: absolute;
+      top: 1102px;
+      left: 1174px;
+      height: 250px;
+      width: 141px;
+      background: url('../images/iphone-2.png') 0 0 no-repeat;
+      background-size: cover;
+
+      @media(max-width: 768px) {
+        top: 1266px;
+        left: 100vw - 23;
+        width: 70px;
+        height: 124px;
+      }
+
+      @media(min-width: 1441px) {
+        left: 1424px;
+      }
+    }
+  }
+
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+
+    @media(max-width: 768px) {
+      margin-top: -15px;
+    }
+  }
+
+  .column {
+    align-self: center;
+    flex-direction: column;
+    flex-basis: 30%;
+    flex-grow: 1;
+    text-align: center;
+
+    img {
+      align-self: flex-end;
+      margin-bottom: 0;
+    }
+
+    @media(max-width: 768px) {
+      flex-direction: row;
+      flex-wrap: wrap;
+
+      &.images {
+        margin-top: -55px;
+
+        margin-bottom: 50px;
+        max-width: 768px;
+        width: auto;
+        flex-basis: 100%;
+
+        img {
+          width: auto;
+          height: 180px;
+        }
+      }
+    }
+  }
+
+  .call-to-action {
+    color: $alt-green;
+    font: 400 35px/41px Raleway;
+    width: 474px;
+    height: 104px;
+    text-align: left;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    @media(max-width: 768px) {
+      font: 400 20px/24px Raleway;
+      width: 297px;
+      height: 65px;
+      margin: 0 auto;
+      text-transform: uppercase;
+      text-align: center;
+    }
+  }
+
+  .description {
+    margin-top: 35px;
+    width: 474px;
+    height: 133px;
+    font: 400 20px/24px Raleway;
+    text-align: left;
+    color: $extra-light-brown;
+
+    @media(max-width: 768px) {
+      font: 400 16px/19px Raleway;
+      width: 100%;
+      text-align: center;
+    }
+  }
+
+  .btn-want-to-know {
+    @media(max-width: 768px) {
+      margin: 0 auto;
+    }
+  }
+}

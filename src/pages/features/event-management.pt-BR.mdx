@@ -1,0 +1,56 @@
+---
+title: Sistema para Igrejas | Gestão de Células | Gestão de membros
+path: /features/event-management
+description: O mais completo sistema para igrejas integrado ao aplicativo para igrejas mais inovador! Atos6 te ajuda a pastorear com qualidade, sua gestão e comunicação mais eficientes. Clique e confira
+keywords: igrejas, células, membros
+hero: {
+  title: "Gestão de Eventos",
+  description: "A gestão de eventos ficou mais fácil e seguro. Você escolhe os métodos de pagamento, faz a divulgação, controle de custo em um único lugar. No aplicativo você pode fazer o check-in, e no sistema gerar etiquetas e até certificado caso haja necessidade."
+}
+previous: {
+  path: /features/teaching,
+  title: "Ensino"
+}
+next: {
+  path: /features/pastor-members,
+  title: "Pastoreio de membros e discipulados"
+}
+---
+
+import Block from "../../components/block"
+import ScheduleDemonstrationBanner from "../../components/schedule_demonstration_banner"
+
+import eventManagement from "../../images/event-management.png"
+import eventPromotion from "../../images/event-promotion.png"
+import eventPromotionMobile from "../../images/event-promotion-mobile.png"
+import eventTicket from "../../images/event-ticket.png"
+import eventCheckIn from "../../images/event-check-in.png"
+
+<ScheduleDemonstrationBanner />
+
+<Block
+  imageOnLeft
+  image={eventManagement}
+  title="Gestão e controle"
+  description="Painel de indicadores em tempo real, página de pesquisa avançada de inscrições e também pode exportar tudo para uma planilha"
+/>
+
+<Block
+  image={eventPromotion}
+  secondImage={eventPromotionMobile}
+  title="Divulgação do seu evento"
+  description="Crie seu evento e ganhe um hot-site com design moderno. É bem simples de configurar. Depois é só divulgar na internet, redes sociais, etc."
+/>
+
+<Block
+  imageOnLeft
+  image={eventTicket}
+  title="Pagamento fácil e seguro"
+  description="Processo seguro e 100% integrado. O participante não precisa realizar outro cadastro. Garantimos a melhor experiência de compra e o mais alto padrão de segurança da indústria financeira: criptografia avançada + PCI Compliance."
+/>
+
+<Block
+  image={eventCheckIn}
+  title="Aplicativo de Check-in"
+  description="Realize o controle de entrada dos participantes pelo celular de forma simples e rápida! O aplicativo faz a leitura do QRcode de cada inscrição e retorna o resultado online. Caso o comprovante já tenha sido usado, o aplicativo também informará, evitando entradas duplicadas. Pode-se usar vários dispositivos ao mesmo tempo sem se preocupar, pois o sincronismo com nossa base de dados é online."
+/>

@@ -1,0 +1,137 @@
+.navigation {
+  margin-bottom: 144px;
+  margin-top: 200px;
+
+  @media(max-width: 768px) {
+    margin-bottom: 69px;
+    margin-top: 92px;
+  }
+
+  .container {
+    height: 100px;
+    padding-bottom: 0;
+
+    @media(max-width: 768px) {
+      height: 200px;
+    }
+  }
+
+  .previous {
+    .navigation-button {
+      text-align: right;
+
+      @media(max-width: 768px) {
+        .navigation-button-title {
+          float: right;
+        }
+      }
+    }
+
+    float: left;
+  }
+
+  .next {
+    .navigation-button {
+      text-align: left;
+
+      @media(max-width: 768px) {
+        .navigation-button-title {
+          float: left;
+        }
+      }
+    }
+
+    float: right;
+
+    @media(max-width: 768px) {
+      margin-top: 15px !important;
+    }
+  }
+
+  .previous,
+  .next {
+    position: relative;
+    width: 524px;
+    height: 100%;
+    text-align: center;
+    display: inline-block;
+    font: Bold 20px/27px Raleway;
+    color: $dark-green;
+
+    > span {
+      display: inline-block;
+      vertical-align: middle;
+
+      @media(max-width: 768px) {
+        text-align: center;
+        margin-left: 10px;
+      }
+    }
+
+    @media(max-width: 768px) {
+      width: 100%;
+      height: 60%;
+      float: none;
+      margin: 0 auto;
+    }
+  }
+
+  .navigation-button {
+    text-align: left;
+    background: $white 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 6px #00000029;
+    border: 1px solid rgba(45,64,69, 0.1);
+    border-radius: 5px;
+    -webkit-background-clip: padding-box; /* for Safari */
+    background-clip: padding-box; /* for IE9+, Firefox 4+, Opera, Chrome */
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 24px;
+    padding-right: 40px;
+    width: 524px;
+    height: 100px;
+    font: Bold 14px/36px Raleway;
+    color: #2D4045B2;
+    display: block;
+
+    .more-features {
+      display: block;
+    }
+
+    .navigation-button-title {
+      font: Bold 24px/36px Raleway;
+      color: $dark-green !important;
+
+      display: block;
+
+      @media(max-width: 768px) {
+        width: 100%;
+        margin: 0;
+      }
+    }
+
+    .arrow-right,
+    .arrow-left {
+      margin-top: -15px;
+    }
+
+    .arrow-right {
+      float: right;
+    }
+
+    .arrow-left {
+      transform: rotate(180deg);
+      float: left;
+    }
+
+    @media(max-width: 768px) {
+      width: 100%;
+      height: 100%;
+      max-height: 130px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      padding-left: 14px;
+      padding-right: 20px;
+    }
+  }
+}

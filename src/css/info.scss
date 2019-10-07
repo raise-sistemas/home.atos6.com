@@ -1,0 +1,219 @@
+.info {
+  background-color: $white;
+  height: 949px;
+  padding-top: 90px;
+  margin-bottom: 48px;
+
+  @media(max-width: 768px) {
+    height: 1152px;
+  }
+
+  &-title {
+    font: Bold 36px/49px Raleway;
+    width: 608px;
+    height: 98px;
+    text-align: center;
+    margin: 0 auto;
+
+    @media(max-width: 768px) {
+      font: Bold 24px/32px Raleway;
+      width: 292px;
+    }
+  }
+
+  &-description {
+    font: 400 16px/25px Raleway;
+    color: #2D4045B2;
+    width: 754px;
+    height: 52px;
+    margin: 0 auto;
+    margin-top: 68px;
+    text-align: center;
+
+    span {
+      font-weight: bold;
+    }
+
+    @media(max-width: 768px) {
+      font: 400 14px/20px Raleway;
+      width: 300px;
+    }
+  }
+
+  &-testimonials {
+    height: 402px;
+    display: block;
+    margin-top: 92px;
+    margin-bottom: 56px;
+
+    @media(max-width: 768px) {
+      margin-bottom: 66px;
+      height: 702px;
+    }
+  }
+
+  &-testimonials-item {
+    display: flex !important;
+    flex-basis: 30%;
+    flex-grow: 1;
+
+    .column {
+      flex-direction: column;
+      flex-wrap: wrap;
+      width: 100%;
+      min-height: 290px;
+    }
+
+    @media(max-width: 768px) {
+      display: inline-block !important;
+    }
+  }
+
+  .testimonial-content-video {
+    width: 550px;
+    display: inline-block;
+
+    @media(max-width: 768px) {
+      width: 300px;
+      margin: 0 auto;
+
+      & iframe,
+      & object,
+      & embed {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 300px;
+        height: 50%;
+      }
+    }
+  }
+
+  .testimonial-content-text {
+    width: 550px;
+    height: 298px;
+    box-shadow: 0px 3px 6px #00000029;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+
+    @media(max-width: 768px) {
+      font: 400 10px/16px Raleway;
+      width: 90%;
+      margin: 0 auto;
+    }
+  }
+
+  .testimonial-text {
+    quotes: '\201c' '\201d';
+    font: 400 18px/25px Raleway;
+    text-align: center;
+    width: 458px;
+
+    @media(max-width: 768px) {
+      width: 272px;
+    }
+
+    &:before, &:after {
+      color: $leaf-green;
+      opacity: 0.2;
+      display: inline;
+      height: 0;
+      line-height: 0;
+      position: relative;
+      font-size: 6em;
+      z-index: -1;
+    }
+
+    &:before {
+      content: open-quote;
+      left: 29px;
+      top: 48px;
+    }
+
+    &:after  {
+      content: close-quote;
+      left: -18px;
+      top: 64px;
+    }
+  }
+
+  .testimonial-author {
+    color: $leaf-green;
+    font: Bold 14px/19px Raleway;
+    text-align: center;
+
+    & span {
+      font: 400 12px/16px Raleway;
+      color: $dark-green;
+      display: block;
+    }
+
+    @media(max-width: 768px) {
+      font: Bold 10px/14px Raleway;
+
+      & span {
+        font: 400 10px/14px Raleway;
+      }
+    }
+  }
+
+  .slick-list {
+    padding-bottom: 12px;
+  }
+
+  .slick-dots {
+    margin-top: 92px;
+    position: relative;
+    bottom: 0;
+    line-height: 5px;
+
+    ul {
+      margin: 0;
+      width: 100%;
+    }
+
+    li {
+      color: $extra-light-gray;
+
+      button:before {
+        font-size: 12px;
+        opacity: 1;
+      }
+
+      &.slick-active button:before {
+        color: $leaf-green;
+      }
+    }
+
+    @media(max-width: 768px) {
+      float: left;
+      text-align: left;
+    }
+  }
+
+  .next-testimonial {
+    position: absolute;
+    float: right;
+    color: $leaf-green !important;
+    font: 400 15px/20px Raleway;
+    width: 166px;
+    right: 30px;
+
+    span {
+      font-weight: bold;
+    }
+
+    @media(max-width: 768px) {
+      right: 10px;
+    }
+  }
+
+  .btn-want-to-know {
+    margin-top: 100px;
+  }
+}

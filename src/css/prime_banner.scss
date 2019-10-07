@@ -1,0 +1,66 @@
+.prime-banner {
+  background: $light-gray 0% 0% no-repeat padding-box;
+  height: 900px;
+  padding-top: 79px;
+  display: flex;
+
+  @media(max-width: 768px) {
+    text-align: center;
+    height: 100%;
+  }
+
+  .title {
+    font: Bold 36px/49px Raleway;
+    text-align: center;
+    color: $dark-green;
+    margin: 0 auto;
+
+    span {
+      color: $leaf-green;
+    }
+
+    @media(max-width: 768px) {
+      font: Bold 20px/24px Raleway;
+    }
+  }
+
+  .description {
+    font: 400 14px/25px Raleway;
+    width: 524px;
+    margin-bottom: 30px;
+    text-align: left;
+
+    @media(max-width: 768px) {
+      width: 300px;
+      text-align: center;
+      margin: 0 auto;
+      margin-bottom: 30px;
+    }
+  }
+
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .column {
+    align-self: center;
+    flex-direction: column;
+    flex-basis: 25%;
+    flex-grow: 1;
+
+    &.cellphone {
+      width: 373px;
+      height: 635px;
+
+      @media(max-width: 768px) {
+        height: auto;
+      }
+    }
+
+    @media(max-width: 768px) {
+      flex: 0 0 100%;
+      flex-wrap: wrap;
+    }
+  }
+}
