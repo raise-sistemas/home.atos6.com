@@ -214,7 +214,7 @@ textarea {
   font: inherit;
 }
 html {
-  font: 112.5%/1.45em georgia, serif;
+  font: 112.5%/1.45em Raleway, serif;
   box-sizing: border-box;
   overflow-y: scroll;
   overflow-x: hidden;
@@ -650,10 +650,12 @@ a {
   @include btn;
 
   font-weight: bold;
-  width: 252px !important;
+  width: 260px !important;
   padding: 2px;
+  padding-left: 11px;
+  padding-right: 11px;
   line-height: 39px;
-  margin-left: 46px;
+  margin-left: 34px;
   background-color: $lime-green;
 
   @media screen and (min-width: 768px) and (max-width: 1024px) {
@@ -704,13 +706,13 @@ a {
 }
 
 .hide-on-mobile {
-  @media(max-width: 769px) {
+  @media(max-width: 768px) {
     display: none !important;
   }
 }
 
 .show-on-mobile {
-  @media(min-width: 769px) {
+  @media(min-width: 1024px) {
     display: none !important;
   }
 }

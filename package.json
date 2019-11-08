@@ -13,11 +13,11 @@
     "@fortawesome/react-fontawesome": "0.1.4",
     "@mdx-js/mdx": "1.4.5",
     "@mdx-js/react": "1.4.5",
-    "animate.css": "3.7.2",
     "axios": "0.19.0",
     "gatsby": "2.15.28",
     "gatsby-image": "^2.2.17",
     "gatsby-plugin-canonical-urls": "2.1.8",
+    "gatsby-plugin-google-analytics": "2.1.24",
     "gatsby-plugin-i18n": "1.0.1",
     "gatsby-plugin-manifest": "^2.2.14",
     "gatsby-plugin-mdx": "1.0.43",
@@ -42,6 +42,7 @@
     "react-helmet": "^5.2.1",
     "react-intl": "3.3.0",
     "react-slick": "0.25.2",
+    "react-text-loop": "2.2.0",
     "slick-carousel": "1.8.1"
   },
   "devDependencies": {
@@ -58,9 +59,9 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing \"",
-    "invalidate_cache": "aws cloudfront create-invalidation --distribution-id DISTRIBUTION_ID --paths \"/*\"",
     "deploy": "yarn run build && gatsby-plugin-s3 deploy --yes",
-    "deploy:production": "yarn run deploy --yes && DISTRIBUTION_ID=1 yarn run invalidate_cache",
-    "deploy:staging": "SITE_URL=http://teste.atos6.com AWS_S3_BUCKET=atos6-landing-page-staging yarn run deploy && DISTRIBUTION_ID=E1EBHX5LIJBBH4 yarn run invalidate_cache"
+    "deploy:production": "GATSBY_ACTIVE_ENV=production yarn run deploy",
+    "deploy:staging": "GATSBY_ACTIVE_ENV=staging yarn run deploy",
+    "deploy:all": "yarn run deploy:staging && yarn run deploy:production"
   }
 }

@@ -13,13 +13,23 @@
     background: url('../images/circle.png') 0 0 no-repeat;
     background-size: cover;
     z-index: 0;
+    width: 574px;
+    height: 514px;
+
+    @media screen and (min-width: 768px) and (max-width: 1024px) {
+      width: 564px;
+      height: 504px;
+    }
   }
 
   &:before {
     top: 1500px;
     left: -45px;
-    width: 574px;
-    height: 514px;
+
+    @media screen and (min-width: 768px) and (max-width: 1024px) {
+      top: 1450px;
+      left: -75px;
+    }
 
     @media(max-width: 768px) {
       top: 2220px;
@@ -28,7 +38,7 @@
       height: 280px;
     }
 
-    @media(min-width: 1441px) {
+    @media(min-width: 1681px) {
       top: 1457px;
       left: 340px;
     }
@@ -37,14 +47,17 @@
   &:after {
     top: 1457px;
     left: 77px;
-    width: 574px;
-    height: 514px;
+
+    @media screen and (min-width: 768px) and (max-width: 1024px) {
+      top: 1375px;
+      left: -40px;
+    }
 
     @media(max-width: 768px) {
       display: none;
     }
 
-    @media(min-width: 1441px) {
+    @media(min-width: 1681px) {
       top: 1477px;
       left: 227px;
     }
@@ -86,8 +99,10 @@
         background-size: 90%;
 
         @media screen and (min-width: 768px) and (max-width: 1024px) {
-          width: 291px;
-          height: 525px;
+          top: 1500px;
+          left: 100vw - 95;
+          width: 271px;
+          height: 505px;
         }
 
         @media(max-width: 768px) {
@@ -97,7 +112,7 @@
           height: 314px;
         }
 
-        @media(min-width: 1441px) {
+        @media(min-width: 1681px) {
           left: 390px;
         }
       }
@@ -113,25 +128,47 @@
         background: url('../images/iphone.png') 0 0 no-repeat;
         background-size: 90%;
 
+        @media screen and (min-width: 768px) and (max-width: 1024px) {
+          width: 343px;
+          height: 625px;
+          top: 1450px;
+          left: 162px;
+        }
+
         @media(max-width: 768px) {
           position: absolute;
           width: 300px;
           height: 345px;
           top: 2279px;
-          left: 100vw - 90;
+          left: 100vw - 95;
           background-size: contain;
           background-position: 99px 20px, 30px 50px;
         }
 
-        @media(min-width: 1441px) {
+        @media(min-width: 1681px) {
           left: 545px;
         }
+      }
+
+      @media screen and (min-width: 768px) and (max-width: 1024px) {
+        width: 50vw;
       }
 
       @media(max-width: 768px) {
         padding-top: 66.64%;
         margin-bottom: 20px;
         width: 100%;
+      }
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1024px) {
+      justify-content: space-between;
+
+      &.descriptive {
+        margin-left: 20px;
+        width: 50vw;
+        align-self: right;
+        float: right;
       }
     }
 
@@ -153,6 +190,12 @@
     padding-left: 10px;
     padding-right: 10px;
 
+    @media screen and (min-width: 768px) and (max-width: 1024px) {
+      width: 533px;
+      padding-left: 0;
+      padding-right: 0;
+    }
+
     @media(max-width: 768px) {
       width: 315px;
       font: 400 20px/24px Raleway;
@@ -169,16 +212,21 @@
     margin-bottom: 30px;
     z-index: 1;
 
-    @media screen and (min-width: 768px) and (max-width: 1024px) {
-      float: right;
-    }
-
     @media(max-width: 768px) {
       width: 261px;
       margin: 0 auto;
       margin-bottom: 70px;
       margin-top: 0;
       text-align: center;
+      height: auto;
+    }
+
+    @media (min-width: 768px) and (max-width: 1024px) {
+      margin: 0 auto;
+      margin-bottom: 30px;
+      float: right;
+      width: 516px;
+      height: 133px;
     }
   }
 
@@ -189,7 +237,16 @@
     width: 100%;
   }
 
-  @media(min-width: 1441px) {
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    background-position: center center;
+  }
+
+  @media (min-width: 1441px) and (max-width: 1680px) {
+    background-position: 0 -200px;
+  }
+
+  @media(min-width: 1681px) {
     background-position: 0 -240px;
+    height: 695px;
   }
 }

@@ -7,7 +7,7 @@ import parseIntlMessage from "./parseIntlMessage"
 
 const PrimeBanner = ({ intl }) => {
   return (
-    <div className="prime-banner">
+    <div id="prime" className="prime-banner">
       <div className="container">
         <div className="title">
           {intl.formatMessage({ id: "prime-banner.main-title" })}
@@ -39,6 +39,7 @@ const PrimeBanner = ({ intl }) => {
             href="https://prime.atos6.com"
             className="know-more"
             rel="noopener noreferrer"
+            target="_blank"
           >
             {intl.formatMessage({ id: "know-more" })} <span>&#10142;</span>
           </a>

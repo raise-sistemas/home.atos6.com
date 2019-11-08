@@ -22,6 +22,10 @@
   color: $middle-gray;
   margin-right: 30px;
 
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    width: 310px;
+  }
+
   @media(max-width: 768px) {
     margin-right: 0;
     text-align: center;
@@ -36,6 +40,10 @@
 
   & img {
     margin-bottom: 0;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    width: 560px;
   }
 
   @media(max-width: 768px) {

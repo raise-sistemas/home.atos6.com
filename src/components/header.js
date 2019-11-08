@@ -33,7 +33,7 @@ const Header = ({ intl, path }) => {
       <div className="container">
         <PrefixedLink to="/" className="logo">
           <img
-            src={scrolled ? logoAlternative : logo}
+            src={scrolled && !showMenuMobile ? logoAlternative : logo}
             width="126px"
             height="60px"
             alt={intl.formatMessage({ id: "site-logo-alt" })}
@@ -58,7 +58,7 @@ const Header = ({ intl, path }) => {
           </li>
 
           <li>
-            <a href="https://blog.atos6.com" rel="noopener norefferer">
+            <a href="https://blog.atos6.com" rel="noopener norefferer" target="_blank">
               {intl.formatMessage({ id: "blog" })}
             </a>
           </li>
@@ -78,13 +78,21 @@ const Header = ({ intl, path }) => {
           {intl.formatMessage({ id: "log-in" })}
         </a>
 
-        <PrefixedLink to="/schedule" className="btn-schedule hide-on-mobile">
+        <a
+          href="https://materiais.atos6.com/atos6-plataforma-completa"
+          className="btn-schedule hide-on-mobile"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
           {intl.formatMessage({ id: "schedule-demonstration.button" })}
-        </PrefixedLink>
+        </a>
 
         <button
           className={`hamburger hamburger--slider show-on-mobile ${
             showMenuMobile ? "is-active" : ""
+          }
+          ${
+            scrolled ? "hamburger-invert" : ""
           }`}
           type="button"
           onClick={() => toggleShowMenuMobile()}
@@ -153,13 +161,11 @@ const Header = ({ intl, path }) => {
 
               <li>
                 <PrefixedLink
-                  to="/features/effective-communication"
+                  to="/features/custom-app"
                   activeClassName="activeLink"
                   partiallyActive
                 >
-                  {intl.formatMessage({
-                    id: "features.effective-communication.name",
-                  })}
+                  {intl.formatMessage({ id: "features.custom-app.name" })}
                 </PrefixedLink>
               </li>
 
@@ -186,7 +192,7 @@ const Header = ({ intl, path }) => {
           </li>
 
           <li>
-            <a href="https://blog.atos6.com" rel="noopener norefferer">
+            <a href="https://blog.atos6.com" rel="noopener norefferer" target="_blank">
               {intl.formatMessage({ id: "blog" })}
             </a>
           </li>

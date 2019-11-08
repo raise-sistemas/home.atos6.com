@@ -2,7 +2,9 @@ import React from "react"
 import { Link } from "gatsby"
 import { injectIntl } from "react-intl"
 
-import locales from "../constants/locales"
+import languages from "../locales/languages"
+
+const { langs } = languages
 
 const PrefixedLink = props => {
   let clonedProps = { ...props }
@@ -12,7 +14,7 @@ const PrefixedLink = props => {
 
   delete clonedProps.to
 
-  const selectedLocale = locales[intl.locale]
+  const selectedLocale = langs[intl.locale]
 
   let prefixedPath = to
 

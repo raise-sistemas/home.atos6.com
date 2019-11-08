@@ -11,8 +11,6 @@ header {
   }
 
   @media(max-width: 768px) {
-    position: absolute;
-
     .logo {
       float: left;
       z-index: 10;
@@ -22,6 +20,16 @@ header {
       margin-left: auto;
       display: inline-block;
       z-index: 10;
+
+      &.hamburger-invert {
+        .hamburger-box {
+          .hamburger-inner,
+          .hamburger-inner:before,
+          .hamburger-inner:after {
+            background-color: $alt-green !important;
+          }
+        }
+      }
     }
 
     .menu-mobile {
@@ -103,6 +111,11 @@ header {
 
     .log-in {
       color: $dark-green !important;
+
+      &:hover {
+        margin-top: 42px;
+        padding-bottom: 38px;
+      }
     }
   }
 
@@ -125,7 +138,7 @@ header {
   }
 
   & > .rule {
-    width: 90%;
+    width: 95vw;
     margin: 0 auto;
     border: 1px solid $white;
     opacity: 0.3;

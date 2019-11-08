@@ -7,6 +7,8 @@ import Slick from "react-slick"
 import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
 
+import parseIntlMessage from "./parseIntlMessage"
+
 import pastorMembers from "../images/pastor-members.gif"
 import cellsFeature from "../images/cells-feature.gif"
 import financialFeature from "../images/financial-feature.gif"
@@ -32,16 +34,14 @@ const primaryFeatureImages = {
 }
 
 const secondaryFeatures = [
-  "effective-communication",
-  "teaching",
   "custom-app",
+  "teaching",
   "event-management",
 ]
 
 const secondaryFeatureImages = {
-  "effective-communication": communicationFeature,
-  teaching: teachingFeature,
   "custom-app": communicationFeature,
+  teaching: teachingFeature,
   "event-management": eventsManagementFeature,
 }
 
@@ -57,17 +57,25 @@ const slickSettings = {
   rows: 1,
 }
 
-const Why = ({ intl, markAsNew }) => {
+const Why = ({ intl, markAsNew, langKey }) => {
+  const handlePath = (path) => {
+    if (langKey) {
+      return `/${langKey}/${path}`
+    }
+
+    return path
+  }
+
   const primaryFeatureItems = primaryFeatures.map(feature => ({
     name: intl.formatMessage({ id: `features.${feature}.name` }),
-    description: intl.formatMessage({ id: `features.${feature}.description` }),
-    path: `/features/${feature}`,
+    description: intl.formatMessage({ id: `features.${feature}.description` }, parseIntlMessage),
+    path: handlePath(`/features/${feature}`),
     image: primaryFeatureImages[feature],
   }))
   const secondaryFeatureItems = secondaryFeatures.map(feature => ({
     name: intl.formatMessage({ id: `features.${feature}.name` }),
-    description: intl.formatMessage({ id: `features.${feature}.description` }),
-    path: `/features/${feature}`,
+    description: intl.formatMessage({ id: `features.${feature}.description` }, parseIntlMessage),
+    path: handlePath(`/features/${feature}`),
     image: secondaryFeatureImages[feature],
   }))
 

@@ -29,7 +29,7 @@
     width: 582px;
 
     @media(max-width: 768px) {
-      font: 400 12px/20px Raleway;
+      font: 400 18px/22px Raleway;
       width: 300px;
     }
   }
@@ -90,6 +90,11 @@
       width: 156px;
       height: 119px;
       margin: 0 auto;
+
+      @media(max-width: 768px) {
+        width: 176px;
+        height: 139px;
+      }
     }
 
     .why-feature-item-detail {
@@ -99,11 +104,19 @@
         display: block;
         margin-bottom: 20px;
         margin-top: 20px;
+
+        @media(max-width: 768px) {
+          font: Bold 20px/24px Raleway;
+        }
       }
 
       .why-feature-item-detail-description {
         font: 400 12px/20px Raleway;
         display: block;
+
+        @media(max-width: 768px) {
+          font: 400 16px/18px Raleway;
+        }
       }
 
       .know-more {

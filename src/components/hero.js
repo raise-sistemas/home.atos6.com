@@ -21,7 +21,7 @@ const images = {
   "/features/cells": cellReportsOnApp,
   "/features/financial": managementReports,
   "/features/online-donations": onlineDonationsApp,
-  "/features/effective-communication": newsOnApp,
+  "/features/custom-app": newsOnApp,
   "/features/teaching": teaching,
   "/features/event-management": eventManagement
 }
@@ -35,7 +35,7 @@ const Hero = ({ home, path, title, description }) => {
         <div className="container">
           <div className="column">
             <div className="description">
-              {intl.formatMessage({ id: "hero.call-to-action" }, parseIntlMessage)}
+              <span>{intl.formatMessage({ id: "hero.call-to-action-first" })}</span>{" "}{intl.formatMessage({ id: "hero.call-to-action-second" })}{" "}<span>{intl.formatMessage({ id: "hero.call-to-action-third" })}</span>{" "}{intl.formatMessage({ id: "hero.call-to-action-fourth" })}{" "}<span>{intl.formatMessage({ id: "hero.call-to-action-fifth" })}</span>
             </div>
           </div>
 
@@ -54,7 +54,6 @@ const Hero = ({ home, path, title, description }) => {
 
               <FadeInUp
                 texts={[
-                  intl.formatMessage({ id: "hero.stay-more-next-with-their-members" }),
                   intl.formatMessage({ id: "hero.have-total-financial-control" }),
                   intl.formatMessage({ id: "hero.organize-their-cells-and-small-groups" }),
                 ]}
@@ -79,6 +78,12 @@ const Hero = ({ home, path, title, description }) => {
           <div className="title">{title}</div>
 
           <div className="description">{description}</div>
+
+          <div className="call-to-action">
+            <a href="https://materiais.atos6.com/atos6-plataforma-completa" className="btn-schedule btn-default" target="_blank">
+              {intl.formatMessage({ id: "schedule-demonstration.button" })}
+            </a>
+          </div>
         </div>
 
         <div className="column image">

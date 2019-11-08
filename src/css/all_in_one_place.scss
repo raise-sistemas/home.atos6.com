@@ -2,54 +2,6 @@
   height: 558px;
   display: flex;
 
-  & .images {
-    &:after {
-      content: '';
-      z-index: 2;
-      position: absolute;
-      top: 1211px;
-      left: 629px;
-      height: 157px;
-      width: 280px;
-      background: url('../images/transmissao-ao-vivo.png') 0 0 no-repeat;
-      background-size: cover;
-
-      @media(max-width: 768px) {
-        top: 1335px;
-        left: 14px;
-        width: 140px;
-        height: 79px;
-      }
-
-      @media(min-width: 1441px) {
-        left: 879px;
-      }
-    }
-
-    &:before {
-      content: '';
-      z-index: 2;
-      position: absolute;
-      top: 1102px;
-      left: 1174px;
-      height: 250px;
-      width: 141px;
-      background: url('../images/iphone-2.png') 0 0 no-repeat;
-      background-size: cover;
-
-      @media(max-width: 768px) {
-        top: 1266px;
-        left: 100vw - 23;
-        width: 70px;
-        height: 124px;
-      }
-
-      @media(min-width: 1441px) {
-        left: 1424px;
-      }
-    }
-  }
-
   .container {
     display: flex;
     flex-wrap: wrap;
@@ -76,7 +28,7 @@
       flex-wrap: wrap;
 
       &.images {
-        margin-top: -55px;
+        margin-top: -15px;
 
         margin-bottom: 50px;
         max-width: 768px;
@@ -111,9 +63,10 @@
   }
 
   .description {
-    margin-top: 35px;
+    margin-top: 25px;
+    margin-bottom: 25px;
     width: 474px;
-    height: 133px;
+    height: 100%;
     font: 400 20px/24px Raleway;
     text-align: left;
     color: $extra-light-brown;

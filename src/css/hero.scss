@@ -5,18 +5,175 @@
   height: 659px;
   width: 100%;
   display: block;
+  margin-bottom: 80px;
 
-  @media screen and (min-width: 768px) and (max-width: 1024px) {
+  & .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    & .column {
+      flex-direction: column;
+      flex-basis: 30%;
+      flex-grow: 1;
+    }
+
+    & .row {
+      flex-flow: row wrap;
+      flex: 1;
+    }
+
+    @media(max-width: 768px) {
+      padding-top: 136px;
+
+      justify-content: center;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      text-align: center;
+
+      .column {
+        flex: 0 0 100%;
+        align-self: flex-start;
+        flex-grow: 1;
+
+        .image {
+          align-self: flex-end;
+        }
+      }
+    }
+  }
+
+  & .call-to-action {
+    position: relative;
+    top: 40px;
+
+    .btn-schedule {
+      font: 400 18px/24px Raleway;
+    }
+
+    @media(max-width: 768px) {
+      top: 400px;
+    }
+  }
+
+  & .description {
+    display: inline-block;
+    height: 185px;
+    width: 623px;
+    font: 400 20px/27px Raleway;
+    color: $white;
+
+    @media all and (min-width: 768px) and (max-width: 1024px) {
+      font: 400 22px/26px Raleway !important;
+      width: 503px;
+    }
+
+    @media(max-width: 768px) {
+      font: 400 12px/20px Raleway;
+      display: block;
+      height: 81px;
+      width: 300px;
+      margin: 0 auto;
+      margin-bottom: 40px;
+
+      & span {
+        font: Bold 24px/32px Raleway !important;
+      }
+    }
+  }
+
+  & .image {
+    align-self: center;
+    display: inline-block;
+    max-height: 579px;
+    height: 579px;
+    position: inherit;
+    left: 680px;
+    margin-top: 140px;
+    max-width: 650px;
+    text-align: center;
+
+    img {
+      margin-bottom: 0;
+      max-width: 579px;
+      max-height: 610px;
+      width: auto;
+      height: auto;
+      margin-left: -60px;
+
+      @media(min-width: 1681px) {
+        margin-left: 60px;
+      }
+    }
+
+    @media all and (min-width: 768px) and (max-width: 1024px) {
+      img {
+        max-height: 490px;
+        max-width: 472px;
+        margin: 0 auto;
+      }
+    }
+
+    @media(max-width: 768px) {
+      top: 0;
+      padding-top: 0;
+      margin-top: 0;
+
+      img {
+        max-height: 350px;
+        max-width: 332px;
+        margin: 0 auto;
+      }
+    }
+  }
+
+  & .title {
+    font: Bold 36px/49px Raleway;
+    color: $white;
+    margin-bottom: 52px;
+
+    @media all and (min-width: 768px) and (max-width: 1024px) {
+      font: Bold 26px/34px Raleway;
+    }
+
+    @media(max-width: 768px) {
+      font: Bold 24px/32px Raleway;
+      text-align: center;
+    }
+  }
+
+  & .btn-want-to-know {
+    margin: 0 auto;
+    display: block;
+    margin-top: 45px;
+
+    @media(max-width: 768px) {
+      top: 330px;
+      left: 63px;
+      position: inherit;
+    }
+
+    @media(min-width: 1681px) {
+      left: 653px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    background-position: -760px -20px;
+    margin-bottom: 180px;
+  }
+
+  @media (min-width: 768px) and (max-width: 1024px) {
     background-position: center center;
   }
 
-  @media(max-width: 768px) {
-    background-position: -760px -20px;
-    margin-bottom: 20px;
+  @media (min-width: 1441px) and (max-width: 1680px) {
+    background-position: 0 -120px;
   }
 
-  @media(min-width: 1441px) {
-    background-position: center -220px;
+  @media(min-width: 1681px) {
+    background-position: center -230px;
+    height: 689px;
   }
 
   &.home {
@@ -24,12 +181,7 @@
                 url('../images/bg-hero.png') center -145px no-repeat;
     background-size: 50%, cover;
     height: 804px;
-
-    @media screen and (min-width: 768px) and (max-width: 1024px) {
-      background-size: 100%, cover;
-      background-position: -690px 20px,
-                           center -145px;
-    }
+    margin-bottom: 0;
 
     @media(max-width: 768px) {
       background-position: -590px 20px,
@@ -37,7 +189,14 @@
       background-size: 804px, cover;
     }
 
-    @media(min-width: 1441px) {
+    @media (min-width: 768px) and (max-width: 1024px) {
+      background-size: 90%, cover;
+      background-position: -660px -50px,
+                           center -145px;
+      height: 694px;
+    }
+
+    @media(min-width: 1680px) {
       background-position: -150px 40px,
                            -310px -145px;
       background-size: 40%, cover;
@@ -90,7 +249,7 @@
         background-clip: content-box;
         margin-left: 0;
 
-        @media screen and (min-width: 768px) and (max-width: 1024px) {
+        @media all and (min-width: 768px) and (max-width: 1024px) {
           max-width: 336px;
           max-height: 345px;
           width: auto;
@@ -105,7 +264,7 @@
         }
       }
 
-      @media screen and (min-width: 768px) and (max-width: 1024px) {
+      @media all and (min-width: 768px) and (max-width: 1024px) {
         width: 300px !important;
         height: 320px;
         min-height: 265px;
@@ -141,127 +300,6 @@
 
     & .container {
       flex-wrap: wrap;
-    }
-  }
-
-  & .container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    & .column {
-      flex-direction: column;
-      flex-basis: 30%;
-      flex-grow: 1;
-    }
-
-    & .row {
-      flex-flow: row wrap;
-      flex: 1;
-    }
-
-    @media(max-width: 768px) {
-      padding-top: 136px;
-
-      justify-content: center;
-      align-items: flex-start;
-      flex-wrap: wrap;
-      text-align: center;
-
-      .column {
-        flex: 0 0 100%;
-        align-self: flex-start;
-        flex-grow: 1;
-
-        .image {
-          align-self: flex-end;
-        }
-      }
-    }
-  }
-
-  & .description {
-    display: inline-block;
-    height: 185px;
-    width: 623px;
-    font: 400 20px/27px Raleway;
-    color: $white;
-
-    @media(max-width: 768px) {
-      font: 400 12px/20px Raleway;
-      display: block;
-      height: 81px;
-      width: 300px;
-      margin: 0 auto;
-      margin-bottom: 40px;
-
-      & span {
-        font: Bold 24px/32px Raleway !important;
-      }
-    }
-  }
-
-  & .image {
-    align-self: center;
-    display: inline-block;
-    max-height: 579px;
-    height: 579px;
-    position: inherit;
-    left: 680px;
-    margin-top: 140px;
-    max-width: 650px;
-    text-align: center;
-
-    img {
-      margin-bottom: 0;
-      max-width: 579px;
-      max-height: 610px;
-      width: auto;
-      height: auto;
-      margin-left: -60px;
-
-      @media(min-width: 1441px) {
-        margin-left: 60px;
-      }
-    }
-
-    @media(max-width: 768px) {
-      top: 0;
-      padding-top: 0;
-      margin-top: 0;
-
-      img {
-        max-height: 350px;
-        max-width: 332px;
-        margin: 0 auto;
-      }
-    }
-  }
-
-  & .title {
-    font: Bold 36px/49px Raleway;
-    color: $white;
-    margin-bottom: 52px;
-
-    @media(max-width: 768px) {
-      font: Bold 24px/32px Raleway;
-      text-align: center;
-    }
-  }
-
-  & .btn-want-to-know {
-    margin: 0 auto;
-    display: block;
-    margin-top: 45px;
-
-    @media(max-width: 768px) {
-      top: 330px;
-      left: 63px;
-      position: inherit;
-    }
-
-    @media(min-width: 1441px) {
-      left: 653px;
     }
   }
 }

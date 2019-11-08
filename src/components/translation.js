@@ -1,6 +1,6 @@
-import locales from "../constants/locales"
+import languages from "../locales/languages"
 
-const localeKeys = Object.keys(locales)
+const { langs } = languages
 
 if (!Intl.PluralRules) {
   require("@formatjs/intl-pluralrules/polyfill")
@@ -12,7 +12,7 @@ if (!Intl.RelativeTimeFormat) {
 
 const jsonLocales = {}
 
-localeKeys.forEach(lang => {
+langs.forEach(lang => {
   if (!Intl.PluralRules) {
     require(`@formatjs/intl-pluralrules/dist/locale-data/${lang}`)
   }

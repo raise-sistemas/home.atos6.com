@@ -20,6 +20,11 @@
     color: $dark-green;
   }
 
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    margin-top: 50px;
+    margin-bottom: 42px;
+  }
+
   @media(max-width: 768px) {
     margin-bottom: 92px;
 

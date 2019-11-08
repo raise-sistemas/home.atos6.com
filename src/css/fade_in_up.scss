@@ -1,9 +1,16 @@
-@import '~animate.css/animate.min.css';
-
 .animation {
   margin-top: 33px;
   font: bold 28px/33px Raleway;
+  text-align: right;
 
-  animation-duration: 3.4s;
-  animation-delay: 2s;
+  max-width: 322px;
+}
+
+.animated {
+  width: 322px;
+  white-space: wrap !important;
+
+  * > {
+  white-space: wrap !important;
+  }
 }

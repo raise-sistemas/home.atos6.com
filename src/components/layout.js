@@ -1,6 +1,9 @@
-import React from "react"
+import React, { Component } from "react"
 import PropTypes from "prop-types"
+import { navigate } from "gatsby"
 import { IntlProvider } from "react-intl"
+import { getUserLangKey } from "ptz-i18n"
+import { withPrefix } from "gatsby-link"
 
 import { messages } from "./translation"
 
@@ -10,43 +13,70 @@ import Footer from "./footer"
 import Navigation from "./navigation"
 import SEO from "./seo"
 
+import languages from "../locales/languages"
+
 import "../css/layout.scss"
 
-const Layout = ({ children, pageContext }) => {
-  const {
-    path,
-    title,
-    description,
-    keywords,
-    hero,
-    previous,
-    next,
-  } = pageContext.frontmatter
+class Layout extends Component {
+  constructor(props) {
+    super(props)
 
-  return (
-    <>
-      <SEO
-        title={title}
-        description={description}
-        meta={[
-          {
-            name: "keywords",
-            content: keywords,
-          },
-        ]}
-      />
+    // Skip build, Browsers only
+    // if (typeof window !== "undefined") {
+    //   const { langs, defaultLangKey } = languages
+    //   const { path } = props
+    //
+    //   const langKey = getUserLangKey(langs, defaultLangKey)
+    //
+    //   const langFound = langs.find((lang) => (path.startsWith(`/${lang}/`)))
+    //
+    //   if (langFound && langFound.length > 0) {
+    //     return
+    //   }
+    //
+    //   const url = langKey !== defaultLangKey ? withPrefix(`/${langKey}/${path}`) : `/${path}`
+    //
+    //   navigate(url)
+    // }
+  }
 
-      <Hero path={path} {...hero} />
+  render() {
+    const { children, pageContext } = this.props
+    const {
+      path,
+      title,
+      description,
+      keywords,
+      hero,
+      previous,
+      next,
+    } = pageContext.frontmatter
 
-      <Header path={path} />
+    return (
+      <>
+        <SEO
+          title={title}
+          description={description}
+          meta={[
+            {
+              name: "keywords",
+              content: keywords,
+            },
+          ]}
+        />
 
-      <main>{children}</main>
+        <Hero path={path} {...hero} />
 
-      <Navigation previous={previous} next={next} />
+        <Header path={path} />
 
-      <Footer />
-    </>
-  )
+        <main>{children}</main>
+
+        <Navigation previous={previous} next={next} />
+
+        <Footer />
+      </>
+    )
+  }
 }
 
 Layout.propTypes = {

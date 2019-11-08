@@ -1,4 +1,5 @@
 import React, { PureComponent } from "react"
+import { injectIntl } from "react-intl"
 import Slick from "react-slick"
 
 import "slick-carousel/slick/slick.css"
@@ -33,7 +34,7 @@ const slickSettings = {
     {
       breakpoint: 1024,
       settings: {
-        slidesToShow: 6,
+        slidesToShow: 4,
         slidesToScroll: 1,
       },
     },
@@ -65,12 +66,14 @@ class Slider extends PureComponent {
     ))
   }
 
-  render() {
-    const { text } = this.props
+  translate = (key) => (
+    this.props.intl.formatMessage({ id: `slider.${key}` })
+  )
 
+  render() {
     return (
       <div className="container slider">
-        <div className="slider-text">{text}</div>
+        <div className="slider-text">{this.translate('text')}</div>
 
         <div className="slider-items">
           <Slick {...slickSettings}>{this.renderItems()}</Slick>
@@ -80,4 +83,4 @@ class Slider extends PureComponent {
   }
 }
 
-export default Slider
+export default injectIntl(Slider)

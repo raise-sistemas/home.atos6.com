@@ -1,9 +1,15 @@
+const activeEnv = process.env.GATSBY_ACTIVE_ENV || process.env.NODE_ENV || "development"
+
+require("dotenv").config({
+  path: `.env.${activeEnv}`,
+})
+
 const languages = require("./src/locales/languages")
 const path = require("path")
 
 const SITE_URL = new URL(process.env.SITE_URL || "https://www.atos6.com")
-const AWS_S3_BUCKET =
-  process.env.AWS_S3_BUCKET || "atos6-landing-page-production"
+const AWS_S3_BUCKET = process.env.AWS_S3_BUCKET || "atos6-landing-page-production"
+const GOOGLE_ANALYTICS_TRACKING_ID = process.env.GOOGLE_ANALYTICS_TRACKING_ID || ''
 
 module.exports = {
   siteMetadata: {
@@ -93,6 +99,20 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-json`,
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: process.env.GOOGLE_ANALYTICS_TRACKING_ID,
+        // Defines where to place the tracking script - `true` in the head and `false` in the body
+        head: false,
+        anonymize: true,
+        // Avoids sending pageview hits from custom paths
+        exclude: ["/preview/**", "/do-not-track/me/too/"],
+        // Delays sending pageview hits on route update (in milliseconds)
+        pageTransitionDelay: 0,
+        cookieDomain: "www.atos6.com",
+      },
+    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {

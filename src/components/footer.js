@@ -21,52 +21,46 @@ const Footer = ({ intl }) => {
     <span className={`social-networks ${className}`}>
       <ul>
         <li>
-          <FontAwesomeIcon icon={["fab", "facebook-square"]} size="lg" />
+          <a href="https://www.facebook.com/atosseis/" rel="noopener noreferrer" target="_blank">
+            <FontAwesomeIcon icon={["fab", "facebook-square"]} size="lg" />
+          </a>
         </li>
 
         <li>
-          <FontAwesomeIcon icon={["fab", "youtube"]} size="lg" />
+          <a href="https://www.youtube.com/channel/UC_1IH_uS0iEJL-i6VtBYmMQ" rel="noopener noreferrer" target="_blank">
+            <FontAwesomeIcon icon={["fab", "youtube"]} size="lg" />
+          </a>
         </li>
 
         <li>
-          <FontAwesomeIcon icon={["fab", "instagram"]} size="lg" />
+          <a href="https://www.instagram.com/atos_6/" rel="noopener noreferrer" target="_blank">
+            <FontAwesomeIcon icon={["fab", "instagram"]} size="lg" />
+          </a>
         </li>
       </ul>
     </span>
   )
 
-  const contactDetails = className => (
-    <div className={`contact-details ${className}`}>
-      <div className="phone">
-        <span>{intl.formatMessage({ id: "phone" })}</span>
-
-        {intl.formatMessage({ id: "phone-and-whatsapp" })}
-      </div>
-
-      <div className="email">{intl.formatMessage({ id: "email" })}</div>
-    </div>
-  )
-
   const blog = (
-    <a href="https://blog.atos6.com" rel="noopener noreferrer">
+    <a href="https://blog.atos6.com" rel="noopener noreferrer" target="_blank">
       {intl.formatMessage({ id: "blog" })}
     </a>
   )
 
   const logIn = (
-    <a href="/users/sign_in" className="log-in" rel="noopener norefferer">
+    <a href="/users/sign_in" rel="noopener norefferer">
       {intl.formatMessage({ id: "log-in" })}
     </a>
   )
 
   const useTerms = (
-    <a href="/use_terms" rel="noopener noreferrer">
+    <a href="/use_terms" rel="noopener noreferrer" target="_blank">
       {intl.formatMessage({ id: "terms-of-use" })}
     </a>
   )
 
   const helpCenter = (
-    <a href="https://ajuda.atos6.com/" rel="noopener noreferrer">
+    <a href="http://ajuda.atos6.com/" rel="noopener noreferrer" target="_blank">
       {intl.formatMessage({ id: "help-center" })}
     </a>
   )
@@ -81,10 +75,6 @@ const Footer = ({ intl }) => {
               alt={intl.formatMessage({ id: "white-logo-alt" })}
             />
 
-            <span className="atos6-slogan">
-              {intl.formatMessage({ id: "slogan" })}
-            </span>
-
             {socialNetworks("")}
           </div>
 
@@ -96,19 +86,45 @@ const Footer = ({ intl }) => {
                 </PrefixedLink>
               </li>
 
-              <li>{blog}</li>
-
               <li>
-                <PrefixedLink to="/carrers">
-                  {intl.formatMessage({ id: "carrers" })}
-                </PrefixedLink>
+                {blog}
               </li>
 
-              <li>{logIn}</li>
+              <li>
+                <a href="#">
+                  {intl.formatMessage({ id: "carrers" })}
+                </a>
+              </li>
             </ul>
           </div>
 
-          <div className="column">{contactDetails("")}</div>
+          <div className="column">
+            <ul className="links">
+              <li>
+                {logIn}
+              </li>
+
+              <li>
+                {helpCenter}
+              </li>
+
+              <li>
+                {useTerms}
+              </li>
+            </ul>
+          </div>
+
+          <div className="column">
+            <ul className="links">
+              <li>
+                <span>{intl.formatMessage({ id: "phone" })}</span>
+              </li>
+
+              <li>
+                <span>{intl.formatMessage({ id: "email" })}</span>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
 
@@ -116,14 +132,6 @@ const Footer = ({ intl }) => {
         <div className="container">
           <div className="copyright hide-on-mobile">
             &copy; {intl.formatMessage({ id: "copyright-message" })}
-          </div>
-
-          <div className="footer-links hide-on-mobile">
-            {helpCenter}
-
-            <span className="dot">&bull;</span>
-
-            {useTerms}
           </div>
 
           <div className="footer-links show-on-mobile">
@@ -135,8 +143,6 @@ const Footer = ({ intl }) => {
 
             {logIn}
           </div>
-
-          {contactDetails("show-on-mobile")}
 
           {socialNetworks("show-on-mobile")}
 
