@@ -9,11 +9,9 @@ require("dotenv").config({
 export const onRenderBody = ({ setPostBodyComponents }) => {
   let scripts = []
 
-  console.log('SITE_ENV', process.env.GATSBY_ACTIVE_ENV)
-
-  const intercomEnabled = process.env.INTERCOM_ENABLED
+  const intercomEnabled = process.env.INTERCOM_ENABLED === 'true'
   if (process.env.NODE_ENV === `production` && intercomEnabled) {
-    const appId = 'vmm9rcdw'
+    const appId = process.env.INTERCOM_APP_ID
 
     scripts.push(
       <script
@@ -25,9 +23,9 @@ export const onRenderBody = ({ setPostBodyComponents }) => {
     )
   }
 
-  const googleTagManagerEnabled = process.env.GOOGLE_TAG_MANAGER_ENABLED
+  const googleTagManagerEnabled = process.env.GOOGLE_TAG_MANAGER_ENABLED === 'true'
   if (process.env.NODE_ENV === `production` && googleTagManagerEnabled) {
-    const tagManagerId = 'GTM-NWP7TFW'
+    const tagManagerId = process.env.GOOGLE_TAG_MANAGER_IDS
 
     if (tagManagerId.indexOf(',') > 0) {
       const ids = tagManagerId.split(',')
