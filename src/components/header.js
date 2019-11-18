@@ -31,14 +31,31 @@ const Header = ({ intl, path }) => {
   return (
     <header className={scrolled ? "header-invert" : ""}>
       <div className="container">
-        <PrefixedLink to="/" className="logo">
-          <img
-            src={scrolled && !showMenuMobile ? logoAlternative : logo}
-            width="126px"
-            height="60px"
-            alt={intl.formatMessage({ id: "site-logo-alt" })}
-          />
-        </PrefixedLink>
+        <div className={`container-alternative ${showMenuMobile ? "show-menu-mobile" : ""}`}>
+          <PrefixedLink to="/" className="logo">
+            <img
+              src={scrolled && !showMenuMobile ? logoAlternative : logo}
+              width="126px"
+              height="60px"
+              alt={intl.formatMessage({ id: "site-logo-alt" })}
+            />
+          </PrefixedLink>
+
+          <button
+            className={`hamburger hamburger--slider show-on-mobile ${
+              showMenuMobile ? "is-active" : ""
+            }
+            ${
+              scrolled ? "hamburger-invert" : ""
+            }`}
+            type="button"
+            onClick={() => toggleShowMenuMobile()}
+          >
+            <span className="hamburger-box">
+              <span className="hamburger-inner"></span>
+            </span>
+          </button>
+        </div>
 
         <ul className="menu hide-on-mobile">
           <li>
@@ -86,21 +103,6 @@ const Header = ({ intl, path }) => {
         >
           {intl.formatMessage({ id: "schedule-demonstration.button" })}
         </a>
-
-        <button
-          className={`hamburger hamburger--slider show-on-mobile ${
-            showMenuMobile ? "is-active" : ""
-          }
-          ${
-            scrolled ? "hamburger-invert" : ""
-          }`}
-          type="button"
-          onClick={() => toggleShowMenuMobile()}
-        >
-          <span className="hamburger-box">
-            <span className="hamburger-inner"></span>
-          </span>
-        </button>
 
         <ul
           className={`menu-mobile show-on-mobile ${
