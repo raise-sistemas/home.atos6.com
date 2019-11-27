@@ -61,6 +61,23 @@ module.exports = {
     },
     `gatsby-plugin-react-helmet`,
     {
+      resolve: "gatsby-plugin-preconnect",
+      options: {
+        domains: [
+          "https://stats.g.doubleclick.net",
+          "https://fonts.googleapis.com",
+          "https://www.google.com.br",
+          "https://www.google.com",
+          "https://blog.atos6.com",
+          "https://www.googletagmanager.com",
+          "https://js.intercomcdn.com",
+          "https://api-iam.intercom.io",
+          "https://widget.intercom.io",
+          "https://marketingplatform.google.com"
+        ]
+      }
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `pages`,
