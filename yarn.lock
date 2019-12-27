@@ -6473,6 +6473,11 @@ gatsby-plugin-canonical-urls@2.1.8:
   dependencies:
     "@babel/runtime" "^7.6.0"
 
+gatsby-plugin-facebook-pixel@1.0.3:
+  version "1.0.3"
+  resolved "https://registry.npmjs.org/gatsby-plugin-facebook-pixel/-/gatsby-plugin-facebook-pixel-1.0.3.tgz#d3cab36fa61803e9d412f36847775d383325dfdf"
+  integrity sha512-IM4e+5FkpLUCV/69tU+GFXVAs0EJXBfM/BARO/6SaMqalLfj1fj4ZXUyC8kHy3RiTMuw+y8g2mdkBMZqj7RyWQ==
+
 gatsby-plugin-google-analytics@2.1.24:
   version "2.1.24"
   resolved "https://registry.npmjs.org/gatsby-plugin-google-analytics/-/gatsby-plugin-google-analytics-2.1.24.tgz#ab1aa59503d236d61873a1b14205976d89ddabb3"
