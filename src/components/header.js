@@ -96,7 +96,7 @@ const Header = ({ intl, path }) => {
         </a>
 
         <a
-          href="https://materiais.atos6.com/atos6-plataforma-completa"
+          href="https://materiais.atos6.com/lp_gestao"
           className="btn-schedule hide-on-mobile"
           rel="noopener noreferrer"
           target="_blank"
