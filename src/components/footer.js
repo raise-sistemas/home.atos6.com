@@ -60,7 +60,7 @@ const Footer = ({ intl }) => {
   )
 
   const helpCenter = (
-    <a href="http://ajuda.atos6.com/" rel="noopener noreferrer" target="_blank">
+    <a href="https://intercom.help/atosseis" rel="noopener noreferrer" target="_blank">
       {intl.formatMessage({ id: "help-center" })}
     </a>
   )
