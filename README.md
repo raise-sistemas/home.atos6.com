@@ -3,7 +3,7 @@
 Repositório que contém o conteúdo da landing page atual do atos6, foi feita
 usando [GatsbyJS](https://www.gatsbyjs.org/).
 
-# Desenvolvimento
+## Desenvolvimento
 
 ```sh
 git clone https://github.com/raisesistemas/atos6-landing-page.git
@@ -11,7 +11,7 @@ cd atos6-landing-page/
 yarn install
 ```
 
-# Deploy
+## Deploy
 
 O processo de deploy é feito usando o comando a seguir (para ser atualizado em
 todos os ambientes):
