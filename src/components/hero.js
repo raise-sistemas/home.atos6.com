@@ -80,7 +80,11 @@ const Hero = ({ home, path, title, description }) => {
           <div className="description">{description}</div>
 
           <div className="call-to-action">
-            <a href="https://materiais.atos6.com/lp_gestao" className="btn-schedule btn-default" target="_blank">
+            <a
+              href="https://materiais.atos6.com/lp_solucao_completa"
+              className="btn-schedule btn-default"
+              target="_blank"
+            >
               {intl.formatMessage({ id: "schedule-demonstration.button" })}
             </a>
           </div>
