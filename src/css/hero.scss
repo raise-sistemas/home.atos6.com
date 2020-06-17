@@ -1,5 +1,5 @@
 .hero {
-  background: url('../images/hero.png') 0 0 no-repeat;
+  background: url("../images/hero.png") 0 0 no-repeat;
   background-size: cover;
   z-index: 0;
   height: 659px;
@@ -23,7 +23,7 @@
       flex: 1;
     }
 
-    @media(max-width: 768px) {
+    @media (max-width: 768px) {
       padding-top: 136px;
 
       justify-content: center;
@@ -51,7 +51,7 @@
       font: 400 18px/24px Raleway;
     }
 
-    @media(max-width: 768px) {
+    @media (max-width: 768px) {
       top: 400px;
     }
   }
@@ -68,7 +68,7 @@
       width: 503px;
     }
 
-    @media(max-width: 768px) {
+    @media (max-width: 768px) {
       font: 400 12px/20px Raleway;
       display: block;
       height: 81px;
@@ -101,7 +101,7 @@
       height: auto;
       margin-left: -60px;
 
-      @media(min-width: 1681px) {
+      @media (min-width: 1681px) {
         margin-left: 60px;
       }
     }
@@ -114,7 +114,7 @@
       }
     }
 
-    @media(max-width: 768px) {
+    @media (max-width: 768px) {
       top: 0;
       padding-top: 0;
       margin-top: 0;
@@ -136,7 +136,7 @@
       font: Bold 26px/34px Raleway;
     }
 
-    @media(max-width: 768px) {
+    @media (max-width: 768px) {
       font: Bold 24px/32px Raleway;
       text-align: center;
     }
@@ -147,13 +147,13 @@
     display: block;
     margin-top: 45px;
 
-    @media(max-width: 768px) {
+    @media (max-width: 768px) {
       top: 330px;
       left: 63px;
       position: inherit;
     }
 
-    @media(min-width: 1681px) {
+    @media (min-width: 1681px) {
       left: 653px;
     }
   }
@@ -171,35 +171,31 @@
     background-position: 0 -120px;
   }
 
-  @media(min-width: 1681px) {
+  @media (min-width: 1681px) {
     background-position: center -230px;
     height: 689px;
   }
 
   &.home {
-    background: url('../images/small-circle.png') -390px 50px no-repeat,
-                url('../images/bg-hero.png') center -145px no-repeat;
-    background-size: 50%, cover;
+    background: url("../images/small-circle.png") -390px 50px no-repeat;
+    background-size: 50%;
     height: 804px;
     margin-bottom: 0;
 
-    @media(max-width: 768px) {
-      background-position: -590px 20px,
-                           -1080px 50px;
-      background-size: 804px, cover;
+    @media (max-width: 768px) {
+      background-position: -590px 20px;
+      background-size: 804px;
     }
 
     @media (min-width: 768px) and (max-width: 1024px) {
-      background-size: 90%, cover;
-      background-position: -660px -50px,
-                           center -145px;
+      background-size: 90%;
+      background-position: -660px -50px;
       height: 694px;
     }
 
-    @media(min-width: 1680px) {
-      background-position: -150px 40px,
-                           -310px -145px;
-      background-size: 40%, cover;
+    @media (min-width: 1680px) {
+      background-position: -150px 40px;
+      background-size: 40%;
     }
 
     .description {
@@ -215,7 +211,7 @@
         font-weight: 800;
       }
 
-      @media(max-width: 768px) {
+      @media (max-width: 768px) {
         font: 400 20px/24px Raleway !important;
         margin: 0;
         margin-bottom: 20px;
@@ -256,7 +252,7 @@
           height: auto;
         }
 
-        @media(max-width: 768px) {
+        @media (max-width: 768px) {
           max-width: 236px;
           max-height: 245px;
           width: 236px;
@@ -271,7 +267,7 @@
         z-index: 2;
       }
 
-      @media(max-width: 768px) {
+      @media (max-width: 768px) {
         align-self: flex-end;
         margin-top: 20px;
         width: 236px !important;
@@ -292,7 +288,7 @@
         display: block;
       }
 
-      @media(max-width: 768px) {
+      @media (max-width: 768px) {
         text-align: center;
         width: 100%;
       }
@@ -301,5 +297,33 @@
     & .container {
       flex-wrap: wrap;
     }
+  }
+}
+
+.background {
+  position: absolute;
+  top: -227px;
+  left: -127px;
+  background: linear-gradient(to bottom, rgb(57, 0, 124) 50%, rgb(57, 0, 124));
+  background-size: 100%;
+  border-bottom-right-radius: 35%;
+  border-bottom-left-radius: 35%;
+  height: 804px;
+  z-index: -1;
+  width: 120vw;
+
+  @media (max-width: 768px) {
+    top: -27px;
+    left: -37px;
+    border-bottom-right-radius: 10%;
+    border-bottom-left-radius: 10%;
+  }
+
+  @media (min-width: 768px) and (max-width: 1024px) {
+    height: 694px;
+  }
+
+  @media (min-width: 1680px) {
+    background-size: 40%;
   }
 }

@@ -656,7 +656,7 @@ a {
   padding-right: 11px;
   line-height: 39px;
   margin-left: 34px;
-  background-color: $lime-green;
+  background-color: $orange;
 
   @media screen and (min-width: 768px) and (max-width: 1024px) {
     margin-left: 16px;
@@ -686,21 +686,21 @@ a {
 .btn-default {
   @include btn;
 
-  background: $leaf-green 0% 0% no-repeat padding-box;
+  background: $alt-purple 0% 0% no-repeat padding-box;
   margin: 0;
 }
 
 .know-more {
-  border: 2px solid $leaf-green;
+  border: 2px solid $alt-purple;
   border-radius: 5px;
   opacity: 1;
-  color: $leaf-green;
+  color: $alt-purple;
   padding: 8px;
   display: inline-block;
   font: 400 16px/22px Raleway;
 
   &:hover {
-    background-color: $leaf-green;
+    background-color: $alt-purple;
     color: $white;
   }
 }

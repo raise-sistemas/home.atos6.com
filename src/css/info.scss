@@ -135,7 +135,7 @@
     }
 
     &:before, &:after {
-      color: $leaf-green;
+      color: $alt-purple;
       opacity: 0.2;
       display: inline;
       height: 0;
@@ -159,7 +159,7 @@
   }
 
   .testimonial-author {
-    color: $leaf-green;
+    color: $alt-purple;
     font: Bold 14px/19px Raleway;
     text-align: center;
 
@@ -202,7 +202,7 @@
       }
 
       &.slick-active button:before {
-        color: $leaf-green;
+        color: $alt-purple;
       }
     }
 
@@ -215,7 +215,7 @@
   .next-testimonial {
     position: absolute;
     float: right;
-    color: $leaf-green !important;
+    color: $alt-purple !important;
     font: 400 15px/20px Raleway;
     width: 166px;
     right: 30px;

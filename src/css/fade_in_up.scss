@@ -2,15 +2,21 @@
   margin-top: 33px;
   font: bold 28px/33px Raleway;
   text-align: right;
-
   max-width: 322px;
+  white-space: wrap !important;
+  word-wrap: break-word;
+
+  * > {
+    white-space: wrap !important;
+  }
 }
 
 .animated {
   width: 322px;
   white-space: wrap !important;
+  word-wrap: break-word;
 
   * > {
-  white-space: wrap !important;
+    white-space: wrap !important;
   }
 }

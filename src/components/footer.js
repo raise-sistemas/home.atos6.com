@@ -2,6 +2,8 @@ import React from "react"
 import { injectIntl } from "react-intl"
 import { library } from "@fortawesome/fontawesome-svg-core"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { useStaticQuery, graphql } from "gatsby"
+import Img from "gatsby-image"
 import {
   faFacebookSquare,
   faYoutube,
@@ -10,30 +12,58 @@ import {
 
 import PrefixedLink from "./prefixed_link"
 
-import whiteLogo from "../images/white-logo.png"
-
 library.add(faFacebookSquare)
 library.add(faYoutube)
 library.add(faInstagram)
 
 const Footer = ({ intl }) => {
+  const data = useStaticQuery(graphql`
+    # prettier-ignore
+    query {
+      file(relativePath: { eq: "images/logo.png" }) {
+        childImageSharp {
+          fixed(
+            width: 190,
+            height: 68,
+            fit: CONTAIN,
+            cropFocus: CENTER,
+            background: "rgba(0, 0, 0, 0)"
+          ) {
+            ...GatsbyImageSharpFixed_withWebp_noBase64
+          }
+        }
+      }
+    }
+  `)
   const socialNetworks = className => (
     <span className={`social-networks ${className}`}>
       <ul>
         <li>
-          <a href="https://www.facebook.com/atosseis/" rel="noopener noreferrer" target="_blank">
+          <a
+            href="https://www.facebook.com/atosseis/"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
             <FontAwesomeIcon icon={["fab", "facebook-square"]} size="lg" />
           </a>
         </li>
 
         <li>
-          <a href="https://www.youtube.com/channel/UC_1IH_uS0iEJL-i6VtBYmMQ" rel="noopener noreferrer" target="_blank">
+          <a
+            href="https://www.youtube.com/channel/UC_1IH_uS0iEJL-i6VtBYmMQ"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
             <FontAwesomeIcon icon={["fab", "youtube"]} size="lg" />
           </a>
         </li>
 
         <li>
-          <a href="https://www.instagram.com/atos_6/" rel="noopener noreferrer" target="_blank">
+          <a
+            href="https://www.instagram.com/atos_6/"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
             <FontAwesomeIcon icon={["fab", "instagram"]} size="lg" />
           </a>
         </li>
@@ -60,7 +90,11 @@ const Footer = ({ intl }) => {
   )
 
   const helpCenter = (
-    <a href="https://intercom.help/atosseis" rel="noopener noreferrer" target="_blank">
+    <a
+      href="https://intercom.help/atosseis"
+      rel="noopener noreferrer"
+      target="_blank"
+    >
       {intl.formatMessage({ id: "help-center" })}
     </a>
   )
@@ -70,8 +104,10 @@ const Footer = ({ intl }) => {
       <div className="top-footer hide-on-mobile">
         <div className="container">
           <div className="column">
-            <img
-              src={whiteLogo}
+            <Img
+              fixed={data.file.childImageSharp.fixed}
+              fadeIn={false}
+              loading="eager"
               alt={intl.formatMessage({ id: "white-logo-alt" })}
             />
 
@@ -86,12 +122,10 @@ const Footer = ({ intl }) => {
                 </PrefixedLink>
               </li>
 
-              <li>
-                {blog}
-              </li>
+              <li>{blog}</li>
 
               <li>
-                <a href="#">
+                <a href="#" alt="">
                   {intl.formatMessage({ id: "carrers" })}
                 </a>
               </li>
@@ -100,17 +134,11 @@ const Footer = ({ intl }) => {
 
           <div className="column">
             <ul className="links">
-              <li>
-                {logIn}
-              </li>
+              <li>{logIn}</li>
 
-              <li>
-                {helpCenter}
-              </li>
+              <li>{helpCenter}</li>
 
-              <li>
-                {useTerms}
-              </li>
+              <li>{useTerms}</li>
             </ul>
           </div>
 

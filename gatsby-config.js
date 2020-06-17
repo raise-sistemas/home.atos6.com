@@ -1,4 +1,5 @@
-const activeEnv = process.env.GATSBY_ACTIVE_ENV || process.env.NODE_ENV || "development"
+const activeEnv =
+  process.env.GATSBY_ACTIVE_ENV || process.env.NODE_ENV || "development"
 
 require("dotenv").config({
   path: `.env.${activeEnv}`,
@@ -8,7 +9,8 @@ const languages = require("./src/locales/languages")
 const path = require("path")
 
 const SITE_URL = new URL(process.env.SITE_URL || "https://www.atos6.com")
-const AWS_S3_BUCKET = process.env.AWS_S3_BUCKET || "atos6-landing-page-production"
+const AWS_S3_BUCKET =
+  process.env.AWS_S3_BUCKET || "atos6-landing-page-production"
 
 module.exports = {
   siteMetadata: {
@@ -63,18 +65,19 @@ module.exports = {
       resolve: "gatsby-plugin-preconnect",
       options: {
         domains: [
+          "https://googleads.g.doubleclick.net",
+          "https://static.doubleclick.net",
           "https://stats.g.doubleclick.net",
+          "https://connect.facebook.net",
           "https://fonts.googleapis.com",
-          "https://www.google.com.br",
-          "https://www.google.com",
           "https://blog.atos6.com",
           "https://www.googletagmanager.com",
           "https://js.intercomcdn.com",
           "https://api-iam.intercom.io",
           "https://widget.intercom.io",
-          "https://marketingplatform.google.com"
-        ]
-      }
+          "https://marketingplatform.google.com",
+        ],
+      },
     },
     {
       resolve: `gatsby-source-filesystem`,
@@ -101,8 +104,8 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `images`,
-        path: `${__dirname}/src/images`,
+        name: `src`,
+        path: `${__dirname}/src`,
       },
     },
     {
@@ -113,7 +116,12 @@ module.exports = {
       },
     },
     `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-plugin-sharp`,
+      options: {
+        stripMetadata: true,
+      },
+    },
     `gatsby-transformer-json`,
     {
       resolve: `gatsby-plugin-facebook-pixel`,
@@ -137,13 +145,16 @@ module.exports = {
         name: `atos6.com`,
         short_name: `atos6`,
         start_url: `/`,
-        background_color: `#267D8C`,
-        theme_color: `#267D8C`,
+        background_color: `#39007C`,
+        theme_color: `#39007C`,
         display: `minimal-ui`,
-        icon: `src/images/logo.png`, // This path is relative to the root of the site.
+        icon: `src/images/logo-alternative.png`, // This path is relative to the root of the site.
       },
     },
     `gatsby-plugin-remove-serviceworker`,
+    `gatsby-plugin-robots-txt`,
+    `gatsby-plugin-no-sourcemaps`,
+    `gatsby-plugin-minify`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

@@ -1,20 +1,53 @@
 import React, { useState } from "react"
 import PropTypes from "prop-types"
 import { injectIntl } from "react-intl"
+import { useStaticQuery, graphql } from "gatsby"
+import Img from "gatsby-image"
 
 import useScrollPosition from "../utils/use_scroll_position"
 
 import PrefixedLink from "./prefixed_link"
 
-import logo from "../images/logo.png"
-import logoAlternative from "../images/logo-alternative.png"
-
 const Header = ({ intl, path }) => {
+  const data = useStaticQuery(graphql`
+    # prettier-ignore
+    query {
+      logo: file(relativePath: { eq: "images/logo.png" }) {
+        childImageSharp {
+          fixed(
+            width: 130,
+            height: 60,
+            fit: CONTAIN,
+            cropFocus: CENTER,
+            background: "rgba(0, 0, 0, 0)"
+          ) {
+            ...GatsbyImageSharpFixed_withWebp_noBase64
+          }
+        }
+      }
+
+      logoAlternative: file(
+        relativePath: { eq: "images/logo-alternative.png" }
+      ) {
+        childImageSharp {
+          fixed(
+            width: 130,
+            height: 60,
+            fit: CONTAIN,
+            cropFocus: CENTER,
+            background: "rgba(0, 0, 0, 0)"
+          ) {
+            ...GatsbyImageSharpFixed_withWebp_noBase64
+          }
+        }
+      }
+    }
+  `)
   const [scrolled, setScrolled] = useState(false)
   const [showMenuMobile, setShowMenuMobile] = useState(false)
 
   useScrollPosition(
-    ({ prevPos, currPos }) => {
+    ({ currPos }) => {
       const isScrolled = currPos.y !== 0
 
       if (isScrolled !== scrolled) {
@@ -31,12 +64,20 @@ const Header = ({ intl, path }) => {
   return (
     <header className={scrolled ? "header-invert" : ""}>
       <div className="container">
-        <div className={`container-alternative ${showMenuMobile ? "show-menu-mobile" : ""}`}>
+        <div
+          className={`container-alternative ${
+            showMenuMobile ? "show-menu-mobile" : ""
+          }`}
+        >
           <PrefixedLink to="/" className="logo">
-            <img
-              src={scrolled && !showMenuMobile ? logoAlternative : logo}
-              width="126px"
-              height="60px"
+            <Img
+              fixed={
+                scrolled && !showMenuMobile
+                  ? data.logoAlternative.childImageSharp.fixed
+                  : data.logo.childImageSharp.fixed
+              }
+              fadeIn={false}
+              loading="eager"
               alt={intl.formatMessage({ id: "site-logo-alt" })}
             />
           </PrefixedLink>
@@ -45,9 +86,7 @@ const Header = ({ intl, path }) => {
             className={`hamburger hamburger--slider show-on-mobile ${
               showMenuMobile ? "is-active" : ""
             }
-            ${
-              scrolled ? "hamburger-invert" : ""
-            }`}
+          ${scrolled ? "hamburger-invert" : ""}`}
             type="button"
             onClick={() => toggleShowMenuMobile()}
           >
@@ -67,7 +106,6 @@ const Header = ({ intl, path }) => {
           <li>
             <a
               href="#features"
-              rel="noopener noreferrer"
               className={path.indexOf("features") > 0 ? "activeLink" : ""}
             >
               {intl.formatMessage({ id: "features" })}
@@ -75,7 +113,11 @@ const Header = ({ intl, path }) => {
           </li>
 
           <li>
-            <a href="https://blog.atos6.com" rel="noopener norefferer" target="_blank">
+            <a
+              href="https://blog.atos6.com"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
               {intl.formatMessage({ id: "blog" })}
             </a>
           </li>
@@ -194,7 +236,11 @@ const Header = ({ intl, path }) => {
           </li>
 
           <li>
-            <a href="https://blog.atos6.com" rel="noopener norefferer" target="_blank">
+            <a
+              href="https://blog.atos6.com"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
               {intl.formatMessage({ id: "blog" })}
             </a>
           </li>

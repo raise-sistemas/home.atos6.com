@@ -10,14 +10,19 @@ footer {
   .social-networks {
     margin-top: 24px;
     display: block;
+    padding-left: 40px;
 
     ul {
       list-style: none;
       margin: 0;
 
+      @media (max-width: 768px) {
+        text-align: center;
+      }
+
       li {
         display: inline-block;
-        margin-right: 17px;
+        margin-right: 27px;
 
         &:last-child {
           margin-right: 0;
@@ -25,9 +30,10 @@ footer {
       }
     }
 
-    @media(max-width: 768px) {
+    @media (max-width: 768px) {
       margin-top: 0;
       width: 100%;
+      padding-left: 0;
 
       svg {
         fill: $white;
@@ -40,14 +46,14 @@ footer {
     font: 400 16px/22px Raleway;
     text-align: right;
 
-    @media(max-width: 768px) {
+    @media (max-width: 768px) {
       width: 100%;
       font: 400 12px/16px Raleway;
       text-align: left;
     }
   }
 
-  @media(max-width: 768px) {
+  @media (max-width: 768px) {
     font: 400 12px/16px Raleway;
     color: $gray;
 
@@ -68,7 +74,7 @@ footer {
 
 .top-footer {
   height: 286px;
-  background-color: $dark-green;
+  background-color: $alt-purple;
   opacity: 1;
   border: 0;
 
@@ -119,7 +125,7 @@ footer {
 .bottom-footer {
   border: 0;
   height: 64px;
-  background-color: $alt-dark-green;
+  background-color: $alt-purple;
 
   & .container {
     display: flex;
@@ -128,7 +134,7 @@ footer {
     padding-bottom: 0;
     height: inherit;
 
-    @media(max-width: 768px) {
+    @media (max-width: 768px) {
       flex-direction: row;
       flex-wrap: wrap;
       padding: 0px 1.0875rem 1.45rem;
@@ -141,7 +147,7 @@ footer {
     float: right;
     width: 50%;
 
-    @media(max-width: 768px) {
+    @media (max-width: 768px) {
       font: 400 9px/12px Raleway;
       width: 100%;
       color: $white;
@@ -170,7 +176,7 @@ footer {
       margin-right: 34px;
     }
 
-    @media(max-width: 768px) {
+    @media (max-width: 768px) {
       width: 100%;
       text-align: left;
       display: flex;
@@ -191,7 +197,7 @@ footer {
     }
   }
 
-  @media(max-width: 768px) {
+  @media (max-width: 768px) {
     height: 179px;
   }
 }
