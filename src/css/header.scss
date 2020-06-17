@@ -51,7 +51,7 @@ header {
         margin-top: 58px;
         text-align: center;
         width: 100%;
-        color: $dark-green;
+        color: $dark-green !important;
 
         a {
           width: 136px;
@@ -104,6 +104,15 @@ header {
           color: $dark-green !important;
           padding-bottom: 38px;
         }
+      }
+    }
+
+    .log-in {
+      color: $dark-green !important;
+
+      &:hover {
+        margin-top: 42px;
+        padding-bottom: 38px;
       }
     }
   }
@@ -182,14 +191,14 @@ header {
   display: inline-block;
   white-space: nowrap;
   min-width: 100px;
-  padding-bottom: 27px;
-  margin-top: 24px;
+  padding-bottom: 48px;
+  margin-top: 50px;
   text-align: center;
   color: $white;
 
   &:hover {
-    margin-top: 30px;
-    padding-bottom: 34px;
+    margin-top: 51px;
+    padding-bottom: 48px;
     font-weight: bold;
     letter-spacing: 0;
     opacity: 1;
