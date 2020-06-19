@@ -148,7 +148,7 @@ module.exports = {
         background_color: `#39007C`,
         theme_color: `#39007C`,
         display: `minimal-ui`,
-        icon: `src/images/logo-alternative.png`, // This path is relative to the root of the site.
+        icon: `src/images/icon.png`, // This path is relative to the root of the site.
       },
     },
     `gatsby-plugin-remove-serviceworker`,
