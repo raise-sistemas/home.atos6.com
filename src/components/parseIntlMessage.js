@@ -1,5 +1,5 @@
 import React from "react"
-import random from "lodash/random"
+import random from "lodash.random"
 
 export default {
   span: v => <span key={random()}>{v}</span>,
