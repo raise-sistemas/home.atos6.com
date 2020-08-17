@@ -5,6 +5,7 @@
   "version": "0.1.0",
   "author": "Atos6 <dev@atos6.com>",
   "dependencies": {
+    "@babel/preset-env": "^7.10.2",
     "@formatjs/intl-pluralrules": "1.2.0",
     "@formatjs/intl-relativetimeformat": "4.1.0",
     "@fortawesome/fontawesome-svg-core": "1.2.25",
