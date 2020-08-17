@@ -64,7 +64,6 @@
     "format": "prettier --write \"**/*.{js,jsx,json,md,mdx}\"",
     "start": "npm run develop",
     "serve": "gatsby serve",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing \"",
-    "deploy": "yarn run build --prefix-paths"
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing \""
   }
 }
