@@ -13,6 +13,7 @@ const AWS_S3_BUCKET =
   process.env.AWS_S3_BUCKET || "atos6-landing-page-production"
 
 module.exports = {
+  pathPrefix: "/atos6.com",
   siteMetadata: {
     title: `Atos6`,
     description: `O mais completo sistema para igrejas integrado ao aplicativo para igrejas mais inovador! Atos6 te ajuda a pastorear com qualidade, sua gestão e comunicação mais eficientes. Clique e confira`,
