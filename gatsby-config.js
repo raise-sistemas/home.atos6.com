@@ -9,8 +9,6 @@ const languages = require("./src/locales/languages")
 const path = require("path")
 
 const SITE_URL = new URL(process.env.SITE_URL || "https://www.atos6.com")
-const AWS_S3_BUCKET =
-  process.env.AWS_S3_BUCKET || "atos6-landing-page-production"
 
 module.exports = {
   pathPrefix: "/atos6.com",
@@ -27,15 +25,6 @@ module.exports = {
       resolve: `gatsby-plugin-canonical-urls`,
       options: {
         siteUrl: SITE_URL.href.slice(0, -1),
-      },
-    },
-    {
-      resolve: `gatsby-plugin-s3`,
-      options: {
-        bucketName: AWS_S3_BUCKET,
-        acl: null,
-        protocol: SITE_URL.protocol.slice(0, -1),
-        hostname: SITE_URL.hostname,
       },
     },
     `gatsby-plugin-sass`,
