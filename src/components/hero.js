@@ -97,7 +97,7 @@ const Hero = ({ home, path, title, description }) => {
 
           <div className="call-to-action">
             <a
-              href="https://materiais.atos6.com/lp_solucao_completa"
+              href="https://materiais.atos6.com/gestao_comunicacao_igreja"
               className="btn-schedule btn-default"
               rel="noopener noreferrer"
               target="_blank"

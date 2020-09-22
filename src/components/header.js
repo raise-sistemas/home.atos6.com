@@ -138,7 +138,7 @@ const Header = ({ intl, path }) => {
         </a>
 
         <a
-          href="https://materiais.atos6.com/lp_solucao_completa"
+          href="https://materiais.atos6.com/gestao_comunicacao_igreja"
           className="btn-schedule hide-on-mobile"
           rel="noopener noreferrer"
           target="_blank"

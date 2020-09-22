@@ -3,7 +3,7 @@ import { injectIntl } from "react-intl"
 
 const WantToKnowButton = ({ intl, className }) => (
   <a
-    href="https://materiais.atos6.com/lp_solucao_completa"
+    href="https://materiais.atos6.com/gestao_comunicacao_igreja"
     title={intl.formatMessage({ id: "want-to-know" })}
     className={`btn-want-to-know ${className}`}
     rel="noopener noreferrer"
