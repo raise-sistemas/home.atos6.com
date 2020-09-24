@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
-Sitemap: https://www.atos6.com/sitemap.xml
-Host: https://www.atos6.com
+Sitemap: https://home.atos6.com/sitemap.xml
+Host: https://home.atos6.com
