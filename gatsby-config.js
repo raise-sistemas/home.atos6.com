@@ -8,10 +8,10 @@ require("dotenv").config({
 const languages = require("./src/locales/languages")
 const path = require("path")
 
-const SITE_URL = new URL(process.env.SITE_URL || "https://www.atos6.com")
+const SITE_URL = new URL(process.env.SITE_URL || "https://home.atos6.com")
 
 module.exports = {
-  pathPrefix: "/atos6.com",
+  pathPrefix: "/",
   siteMetadata: {
     title: `Atos6`,
     description: `O mais completo sistema para igrejas integrado ao aplicativo para igrejas mais inovador! Atos6 te ajuda a pastorear com qualidade, sua gestão e comunicação mais eficientes. Clique e confira`,
@@ -132,7 +132,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `atos6.com`,
+        name: `home.atos6.com`,
         short_name: `atos6`,
         start_url: `/`,
         background_color: `#39007C`,
