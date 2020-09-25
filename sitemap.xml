@@ -17,4 +17,6 @@
 <url> <loc>https://home.atos6.com/features/teaching/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://home.atos6.com/en/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://home.atos6.com/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://home.atos6.com/en/use_terms/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://home.atos6.com/use_terms/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 </urlset>
