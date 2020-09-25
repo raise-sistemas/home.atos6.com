@@ -24,8 +24,10 @@ const images = {
   "/features/event-management": eventManagement,
 }
 
-const Hero = ({ home, path, title, description }) => {
+const Hero = ({ home, path, title, description, visible }) => {
   const intl = useIntl()
+
+  if (!visible) return <></>
 
   if (home) {
     return (
@@ -119,10 +121,12 @@ Hero.propTypes = {
   description: PropTypes.string,
   title: PropTypes.string,
   home: PropTypes.bool.isRequired,
+  visible: PropTypes.bool,
 }
 
 Hero.defaultProps = {
   home: false,
+  visible: true,
 }
 
 export default Hero
