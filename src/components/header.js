@@ -123,7 +123,7 @@ const Header = ({ intl, path }) => {
           </li>
 
           <li>
-            <a href="/contact/new" rel="noopener norefferer">
+            <a href="/contact" rel="noopener norefferer">
               {intl.formatMessage({ id: "contact" })}
             </a>
           </li>

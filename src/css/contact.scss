@@ -1,0 +1,23 @@
+#contact-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  padding: 200px calc(100vw - 80vw);
+  & a {
+    color: #0366d6;
+  }
+}
+
+#contact-header {
+  width: 100%;
+  text-align: center;
+}
+
+#contact-body {
+  display: grid;
+  gap: 32px;
+  text-align: center;
+  margin-top: 70px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
