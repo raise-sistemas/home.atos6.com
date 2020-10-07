@@ -84,7 +84,11 @@ const Footer = ({ intl }) => {
   )
 
   const useTerms = (
-    <a href="/use_terms" rel="noopener noreferrer" target="_blank">
+    <a
+      href={`${window.location.host}/use_terms`}
+      rel="noopener noreferrer"
+      target="_blank"
+    >
       {intl.formatMessage({ id: "terms-of-use" })}
     </a>
   )
