@@ -84,9 +84,7 @@ const Footer = ({ intl }) => {
   )
 
   const useTerms = (
-    <a href="/use_terms" rel="noopener noreferrer" target="_blank">
-      {intl.formatMessage({ id: "terms-of-use" })}
-    </a>
+    <a href="/use_terms">{intl.formatMessage({ id: "terms-of-use" })}</a>
   )
 
   const helpCenter = (

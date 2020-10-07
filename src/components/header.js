@@ -123,9 +123,7 @@ const Header = ({ intl, path }) => {
           </li>
 
           <li>
-            <a href="/contact" rel="noopener norefferer">
-              {intl.formatMessage({ id: "contact" })}
-            </a>
+            <a href="/contact">{intl.formatMessage({ id: "contact" })}</a>
           </li>
         </ul>
 
@@ -246,9 +244,7 @@ const Header = ({ intl, path }) => {
           </li>
 
           <li>
-            <a href="/contact" rel="noopener norefferer">
-              {intl.formatMessage({ id: "contact" })}
-            </a>
+            <a href="/contact">{intl.formatMessage({ id: "contact" })}</a>
           </li>
 
           <li>
