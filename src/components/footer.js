@@ -84,7 +84,9 @@ const Footer = ({ intl }) => {
   )
 
   const useTerms = (
-    <a href="/use_terms">{intl.formatMessage({ id: "terms-of-use" })}</a>
+    <PrefixedLink to="/use_terms">
+      {intl.formatMessage({ id: "terms-of-use" })}
+    </PrefixedLink>
   )
 
   const helpCenter = (

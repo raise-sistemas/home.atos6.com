@@ -123,7 +123,9 @@ const Header = ({ intl, path }) => {
           </li>
 
           <li>
-            <a href="/contact">{intl.formatMessage({ id: "contact" })}</a>
+            <PrefixedLink to="/contact">
+              {intl.formatMessage({ id: "contact" })}
+            </PrefixedLink>
           </li>
         </ul>
 
@@ -244,7 +246,9 @@ const Header = ({ intl, path }) => {
           </li>
 
           <li>
-            <a href="/contact">{intl.formatMessage({ id: "contact" })}</a>
+            <PrefixedLink to="/contact">
+              {intl.formatMessage({ id: "contact" })}
+            </PrefixedLink>
           </li>
 
           <li>
