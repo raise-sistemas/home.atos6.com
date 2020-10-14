@@ -7,6 +7,7 @@ import Img from "gatsby-image"
 import useScrollPosition from "../utils/use_scroll_position"
 
 import PrefixedLink from "./prefixed_link"
+import { signInUrl } from "../utils/signInUrl"
 
 const Header = ({ intl, path }) => {
   const data = useStaticQuery(graphql`
@@ -130,9 +131,9 @@ const Header = ({ intl, path }) => {
         </ul>
 
         <a
-          href="/users/sign_in"
+          href={`${signInUrl()}/users/sign_in`}
           className="log-in hide-on-mobile"
-          rel="noopener norefferer"
+          rel="noopener noreferer"
         >
           {intl.formatMessage({ id: "log-in" })}
         </a>
@@ -254,9 +255,9 @@ const Header = ({ intl, path }) => {
           <li>
             <div className="log-in">
               <a
-                href="/users/sign_in"
+                href={`${signInUrl()}/users/sign_in`}
                 className="btn-default"
-                rel="noopener norefferer"
+                rel="noopener noreferrer"
               >
                 {intl.formatMessage({ id: "log-in" })}
               </a>
