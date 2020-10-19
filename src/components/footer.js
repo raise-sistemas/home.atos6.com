@@ -11,7 +11,7 @@ import {
 } from "@fortawesome/free-brands-svg-icons"
 
 import PrefixedLink from "./prefixed_link"
-import { signInUrl } from "../utils/signInUrl"
+import { redirectToSignIn } from "../utils/redirectToSignIn"
 
 library.add(faFacebookSquare)
 library.add(faYoutube)
@@ -79,7 +79,10 @@ const Footer = ({ intl }) => {
   )
 
   const logIn = (
-    <a href={`${signInUrl()}/users/sign_in`} rel="noopener norefferer">
+    <a 
+      onClick={redirectToSignIn}
+      href="/"
+      rel="noopener norefferer">
       {intl.formatMessage({ id: "log-in" })}
     </a>
   )
