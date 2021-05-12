@@ -35,6 +35,10 @@ class Layout extends Component {
               name: "keywords",
               content: keywords,
             },
+            {
+              name: "facebook-domain-verification",
+              content: "l250hquin7pas7t0ci1hcxy4v5v3t5",
+            }
           ]}
         />
 
