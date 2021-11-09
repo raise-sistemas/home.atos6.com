@@ -114,8 +114,9 @@ footer {
     align-content: center;
 
     & .column {
+      margin-top: 80px;
       flex-direction: column;
-      flex-basis: 23%;
+      // flex-basis: 23%;
       flex-grow: 1;
       align-self: flex-start;
     }
@@ -133,6 +134,7 @@ footer {
     justify-content: left;
     padding-bottom: 0;
     height: inherit;
+    color: $white;
 
     @media (max-width: 768px) {
       flex-direction: row;
@@ -178,9 +180,9 @@ footer {
 
     @media (max-width: 768px) {
       width: 100%;
-      text-align: left;
+      text-align: center;
       display: flex;
-      flex-direction: row;
+      flex-direction: column;
       flex-basis: 20%;
       flex-grow: 1;
       flex-wrap: wrap;

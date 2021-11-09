@@ -79,17 +79,26 @@ const Footer = ({ intl }) => {
   )
 
   const logIn = (
-    <a 
-      onClick={redirectToSignIn}
-      href="/"
-      rel="noopener norefferer">
+    <a onClick={redirectToSignIn} href="/" rel="noopener norefferer">
       {intl.formatMessage({ id: "log-in" })}
     </a>
   )
 
-  const useTerms = (
-    <PrefixedLink to="/use_terms">
-      {intl.formatMessage({ id: "terms-of-use" })}
+  const privacyUser = (
+    <PrefixedLink to="/privacy_user">
+      {intl.formatMessage({ id: "privacy-user" })}
+    </PrefixedLink>
+  )
+
+  const privacyChurch = (
+    <PrefixedLink to="/privacy_church">
+      {intl.formatMessage({ id: "privacy-church" })}
+    </PrefixedLink>
+  )
+
+  const privacy = (
+    <PrefixedLink to="/privacy">
+      {intl.formatMessage({ id: "privacy" })}
     </PrefixedLink>
   )
 
@@ -139,10 +148,10 @@ const Footer = ({ intl }) => {
           <div className="column">
             <ul className="links">
               <li>{logIn}</li>
-
               <li>{helpCenter}</li>
-
-              <li>{useTerms}</li>
+              <li>{privacy}</li>
+              <li>{privacyUser}</li>
+              <li>{privacyChurch}</li>
             </ul>
           </div>
 
@@ -167,8 +176,11 @@ const Footer = ({ intl }) => {
           </div>
 
           <div className="footer-links show-on-mobile">
-            {useTerms}
-
+            {privacyUser}
+            {privacyChurch}
+            {privacy}
+          </div>
+          <div className="footer-links show-on-mobile">
             {helpCenter}
 
             {blog}
