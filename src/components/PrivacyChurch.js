@@ -451,11 +451,11 @@ const PrivacyChurch = () => {
                 diretrizes de Segurança da Informação da ANPD para Startups.
               </TextBody>
               <TextBody>
-                &nbsp;&nbsp;&nbsp;3.1.1. Esses servidores são independentes e
-                não possuem relação com o presente texto. Sendo assim,
-                recomendamos que você também leia os termos de uso e políticas
-                de privacidade dessas plataformas e veja se concorda com todas
-                as disposições, antes de utilizar nossos serviços.
+                &;;&nbsp;&nbsp;3.1.1. Esses servidores são independentes e não
+                possuem relação com o presente texto. Sendo assim, recomendamos
+                que você também leia os termos de uso e políticas de privacidade
+                dessas plataformas e veja se concorda com todas as disposições,
+                antes de utilizar nossos serviços.
               </TextBody>
               <br />
               <TextBody>
@@ -883,9 +883,9 @@ const PrivacyChurch = () => {
                 receber todas as comunicações que os Usuários desejarem fazer:
                 pelo chat online disponível na plataforma, pelo e-mail{" "}
                 <Link href="mailto:atendimento@atos6.com">
-                  atendimento@atos6
+                  atendimento@atos6.com &nbsp;
                 </Link>
-                .com ou pelo telefone (21) 97272-5572.
+                ou pelo telefone (21) 97272-5572.
               </TextBody>
               <br />
             </AccordionPanel>
