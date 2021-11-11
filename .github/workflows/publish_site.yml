@@ -22,7 +22,7 @@ jobs:
 
       - uses: actions/setup-node@v1
         with:
-          node-version: '12.6.0'
+          node-version: "16.13.0"
 
       - name: yarn install
         if: steps.cache-node-modules.outputs.cache-hit != 'true'
