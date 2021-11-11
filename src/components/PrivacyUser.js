@@ -376,7 +376,7 @@ const PrivacyUser = () => {
 
               <TextBody>
                 1.1. O presente documento foi redigido e disponibilizado em
-                09/11/2021.
+                11/11/2021.
               </TextBody>
               <br />
               <TextBody size="bold">
