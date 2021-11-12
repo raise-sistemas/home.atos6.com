@@ -16,7 +16,7 @@
     "@labz/ds": "^0.0.66-alpha",
     "@mdx-js/mdx": "^1.5.9",
     "@mdx-js/react": "1.4.5",
-    "axios": "0.19.0",
+    "axios": "0.21.2",
     "css-loader": "^6.5.1",
     "gatsby": "^2.25.0",
     "gatsby-image": "2.4.7",
