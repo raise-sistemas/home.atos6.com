@@ -1,23 +1,23 @@
-@import 'mixins';
-@import 'colors';
-@import 'segoe-ui';
-@import 'hero';
-@import 'image_overlap';
-@import 'header';
-@import 'footer';
-@import 'slider';
-@import 'fade_in_up';
-@import 'feature_icons';
-@import 'why';
-@import 'feature_accordion';
-@import 'info';
-@import 'all_in_one_place';
-@import 'native_apps';
-@import 'blog';
-@import 'block';
-@import 'navigation';
-@import 'prime_banner';
-@import 'schedule_demonstration_banner';
+@import "mixins";
+@import "colors";
+@import "segoe-ui";
+@import "hero";
+@import "image_overlap";
+@import "header";
+@import "footer";
+@import "slider";
+@import "fade_in_up";
+@import "feature_icons";
+@import "why";
+@import "feature_accordion";
+@import "info";
+@import "all_in_one_place";
+@import "native_apps";
+@import "blog";
+@import "block";
+@import "navigation";
+@import "prime_banner";
+@import "schedule_demonstration_banner";
 
 $hamburger-layer-color: $white;
 $hamburger-layer-width: 24px;
@@ -615,7 +615,7 @@ td:last-child {
   padding: 0px 1.0875rem 1.45rem;
   padding-top: 0;
 
-  @media(max-width: 768px) {
+  @media (max-width: 768px) {
     max-width: 100%;
     width: 100%;
     padding-right: 0;
@@ -706,18 +706,18 @@ a {
 }
 
 .hide-on-mobile {
-  @media(max-width: 768px) {
+  @media (max-width: 768px) {
     display: none !important;
   }
 }
 
 .show-on-mobile {
-  @media(min-width: 1024px) {
+  @media (min-width: 1024px) {
     display: none !important;
   }
 }
 
-@media(max-width: 768px) {
+@media (max-width: 768px) {
   body {
     overflow-x: hidden;
     overflow-y: scroll !important;

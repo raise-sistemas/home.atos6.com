@@ -23,11 +23,12 @@ module.exports = {
     `gatsby-plugin-sitemap`,
     {
       resolve: `gatsby-plugin-canonical-urls`,
+      resolve: `gatsby-plugin-sass`,
       options: {
         siteUrl: SITE_URL.href.slice(0, -1),
+        implementation: require("sass"),
       },
     },
-    `gatsby-plugin-sass`,
     {
       resolve: "gatsby-plugin-i18n",
       options: {

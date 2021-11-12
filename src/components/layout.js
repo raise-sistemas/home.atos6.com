@@ -1,4 +1,5 @@
 import React, { Component } from "react"
+import Helmet from "react-helmet"
 import PropTypes from "prop-types"
 import { IntlProvider } from "react-intl"
 
@@ -38,7 +39,7 @@ class Layout extends Component {
             {
               name: "facebook-domain-verification",
               content: "l250hquin7pas7t0ci1hcxy4v5v3t5",
-            }
+            },
           ]}
         />
 
@@ -68,6 +69,12 @@ export default props => {
   return (
     <IntlProvider locale={langKey} messages={messages[langKey]}>
       <Layout {...props} />
+      <Helmet>
+        <script
+          src="https://api.consenty.me/script/efc8d0ab-7e2c-4b7f-93fc-6cf3acac4ff4.js"
+          async
+        ></script>
+      </Helmet>
     </IntlProvider>
   )
 }
