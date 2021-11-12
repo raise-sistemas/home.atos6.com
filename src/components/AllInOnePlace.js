@@ -12,7 +12,10 @@ const AllInOnePlace = ({ intl }) => (
     <div className="container">
       <div className="column">
         <div className="call-to-action">
-          {intl.formatMessage({ id: "all-in-one-place.call-to-action" }, parseIntlMessage)}
+          {intl.formatMessage(
+            { id: "all-in-one-place.call-to-action" },
+            parseIntlMessage
+          )}
         </div>
 
         <div className="description">
