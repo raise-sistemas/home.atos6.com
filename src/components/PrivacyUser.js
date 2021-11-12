@@ -383,7 +383,7 @@ const PrivacyUser = () => {
                     Estas políticas de privacidade se referem apenas às Usuárias
                     Finais, caso seja Usuária Organização,{" "}
                     <Link
-                      href="https://www.atos6.com/privacy_church"
+                      href="https://home.atos6.com/privacy_church"
                       target="_blank"
                     >
                       clique aqui
