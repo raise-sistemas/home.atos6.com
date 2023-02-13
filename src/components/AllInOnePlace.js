@@ -1,7 +1,7 @@
 import React from "react"
 import { injectIntl } from "react-intl"
 
-import notebook from "../images/notebook.png"
+import notebook from "../images/notebook-new.png"
 
 import WantToKnowButton from "./WantToKnowButton"
 

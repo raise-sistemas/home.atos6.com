@@ -1,7 +1,7 @@
 import React from "react"
 import { injectIntl } from "react-intl"
 
-import communication from "../images/communication.png"
+import communication from "../images/Flying-iPhone-X-Mockups-new.png"
 
 import parseIntlMessage from "./parseIntlMessage"
 

@@ -4,7 +4,7 @@
   padding-top: 79px;
   display: flex;
 
-  @media(max-width: 768px) {
+  @media (max-width: 768px) {
     text-align: center;
     height: 100%;
   }
@@ -19,7 +19,7 @@
       color: $alt-purple;
     }
 
-    @media(max-width: 768px) {
+    @media (max-width: 768px) {
       font: Bold 20px/24px Raleway;
     }
   }
@@ -30,7 +30,7 @@
     margin-bottom: 30px;
     text-align: left;
 
-    @media(max-width: 768px) {
+    @media (max-width: 768px) {
       width: 300px;
       text-align: center;
       margin: 0 auto;
@@ -53,12 +53,13 @@
       width: 373px;
       height: 635px;
 
-      @media(max-width: 768px) {
+      @media (max-width: 768px) {
+        padding-top: 20px;
         height: auto;
       }
     }
 
-    @media(max-width: 768px) {
+    @media (max-width: 768px) {
       flex: 0 0 100%;
       flex-wrap: wrap;
     }
