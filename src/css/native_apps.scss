@@ -92,10 +92,10 @@
         content: "";
         z-index: 1;
         position: absolute;
-        width: 675px;
+        width: 433px;
         height: 535px;
-        top: 1500px;
-        left: 50px;
+        top: 1533px;
+        left: 160px;
         background: url("../images/iphone-native-apps.png") 0 0 no-repeat;
         background-size: 90%;
 
@@ -103,6 +103,13 @@
           top: 1500px;
           left: 100vw - 90;
           width: 271px;
+          height: 505px;
+        }
+
+        @media screen and (min-width: 1024px) and (max-width: 1164px) {
+          top: 1530px;
+          left: 100vw - 90;
+          width: 371px;
           height: 505px;
         }
 
@@ -114,7 +121,7 @@
         }
 
         @media (min-width: 1681px) {
-          left: 300px;
+          left: 410px;
         }
       }
 
