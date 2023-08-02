@@ -41,7 +41,7 @@ export default function Contact() {
         </div>
         <div>
           <img alt="Hand holding a cellphone" src={Hand} />
-          <h5>(21) 97272-5572</h5>
+          <h5>(21) 96669-6468</h5>
           <p>
             <strong>Deseja nos ligar?&nbsp;</strong>Entre em contato pelo
             telefone,{" "}

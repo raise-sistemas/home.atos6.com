@@ -53,7 +53,7 @@ const PrivacyUser = () => {
                   <Link href="mailto:atendimento@atos6.com">
                     atendimento@atos6.com
                   </Link>
-                  , pelo telefone (21) 97272-5572 ou chat disponível na
+                  , pelo telefone (21) 96669-6468 ou chat disponível na
                   plataforma.
                 </AccordionPanel>
                 <AccordionPanel pb={4}>
@@ -978,7 +978,7 @@ const PrivacyUser = () => {
                     <Link href="mailto:atendimento@atos6.com" target="_blank">
                       atendimento@atos6.com
                     </Link>{" "}
-                    ou pelo telefone (21) 97272-5572.
+                    ou pelo telefone (21) 96669-6468.
                   </TextBody>
                 </AccordionPanel>
               </AccordionItem>
